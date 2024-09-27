@@ -1,19 +1,20 @@
 #ifndef CODE_LIGHTITERATOR_H
 #define CODE_LIGHTITERATOR_H
 
-#include "Integrator.h"
+//#include "Integrator.h"
+#include "LightNode.h"
 
 class Mediator;
 
 class LightIterator{
     friend class Mediator;
     protected:
-        Integrator* current;
-        Integrator* head;
+        LightNode* current;
+        LightNode* head;
 
     public:
-        LightIterator();
-        Integrator* goToNext();
+        LightIterator(LightNode *node);
+        LightNode* goToNext();
         void reset();
 
 };

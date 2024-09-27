@@ -1,7 +1,8 @@
 #ifndef CODE_THERMOITERATOR_H
 #define CODE_THERMOITERATOR_H
 
-#include "Integrator.h"
+//#include "Integrator.h"
+#include "ThermoNode.h"
 
 class Mediator;
 
@@ -10,12 +11,12 @@ class ThermoIterator{
 
 
 protected:
-    Integrator* current;
-    Integrator* head;
+    ThermoNode* current;
+    ThermoNode* head;
 
 public:
-    ThermoIterator();
-    Integrator* goToNext();
+    ThermoIterator(ThermoNode *thermo);
+    ThermoNode* goToNext();
     void reset();
 };
 

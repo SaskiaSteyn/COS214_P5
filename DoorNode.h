@@ -6,9 +6,11 @@
 class DoorNode {
 
     public:
+        DoorNode();
+        DoorNode(Integrator *door);
         Integrator* door;
-        Integrator* next;
-        Integrator* prev;
+        DoorNode* next;
+        DoorNode* prev;
 
 };
 
