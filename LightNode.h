@@ -5,9 +5,11 @@
 
 class LightNode {
     public:
+        LightNode();
+        LightNode(Integrator *node);
         Integrator* light;
-        Integrator* next;
-        Integrator* prev;
+        LightNode* next;
+        LightNode* prev;
 
 };
 

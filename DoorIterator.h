@@ -1,19 +1,20 @@
 #ifndef CODE_DOORITERATOR_H
 #define CODE_DOORITERATOR_H
 
-#include "Integrator.h"
+//#include "Integrator.h"
+#include "DoorNode.h"
 
 class Mediator;
 
 class DoorIterator {
     friend class Mediator;
     protected:
-        Integrator* current;
-        Integrator* head;
+        DoorNode* current;
+        DoorNode* head;
 
     public:
-        DoorIterator();
-        Integrator* goToNext();
+        DoorIterator(DoorNode *door);
+        DoorNode* goToNext();
         void reset();
 };
 

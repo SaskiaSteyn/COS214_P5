@@ -6,9 +6,11 @@
 class ThermoNode {
 
     public:
+        ThermoNode();
+        ThermoNode(Integrator *thermo);
         Integrator* thermo;
-        Integrator* next;
-        Integrator* prev;
+        ThermoNode* next;
+        ThermoNode* prev;
 
 };
 
