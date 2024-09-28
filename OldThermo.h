@@ -5,8 +5,9 @@
 
 class OldThermo : public ThermoType{
     public:
-        void increaseTemp(float temp);
-        void decreaseTemp(float temp);
+        OldThermo(float initialTemp);
+        void increaseTemp(float newTemp);
+        void decreaseTemp(float newTemp);
 };
 
 

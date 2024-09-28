@@ -5,7 +5,7 @@
 
 class SmartLight : public LightType{
     public:
-        void setLight();
+        void setLight() override;
 };
 
 

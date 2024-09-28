@@ -6,7 +6,7 @@
 class Integrator : public Mediator{
 
     public:
-        void receiveMessage(string message);
+        void receiveMessage(string& message);
 
 };
 

@@ -4,11 +4,12 @@
 #include "Integrator.h"
 
 class ThermoType : public Integrator{
-    private:
+    protected:
         float temp;
     public:
-        virtual void increaseTemp(float temp);
-        virtual void decreaseTemp(float temp);
+        ThermoType(float initialTemp);
+        virtual void increaseTemp(float newTemp);
+        virtual void decreaseTemp(float newTemp);
         float getTemp();
 };
 

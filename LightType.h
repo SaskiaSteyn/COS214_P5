@@ -4,10 +4,11 @@
 #include "Integrator.h"
 
 class LightType : public Integrator{
-    private:
+    protected:
         bool lightOnOff;
 
     public:
+        LightType();
         virtual void setLight();
         bool getLight();
 

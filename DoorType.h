@@ -4,9 +4,10 @@
 #include "Integrator.h"
 
 class DoorType : public Integrator{
-    private:
+    protected:
         bool doorLocked;
     public:
+        DoorType();
         virtual void toggleDoor();
         bool getDoor();
 
