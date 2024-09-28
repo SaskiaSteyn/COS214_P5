@@ -5,8 +5,9 @@
 
 class SmartThermo : public ThermoType{
     public:
-        void increaseTemp(float temp);
-        void decreaseTemp(float temp);
+        SmartThermo(float initialTemp);
+        void increaseTemp(float newTemp) override;
+        void decreaseTemp(float newTemp) override;
 };
 
 

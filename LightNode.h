@@ -3,6 +3,8 @@
 
 #include "Integrator.h"
 
+class Integrator;
+
 class LightNode {
     public:
         LightNode();

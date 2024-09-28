@@ -5,7 +5,7 @@
 
 class SmartDoor : public DoorType{
     public:
-        void toggleDoor();
+        void toggleDoor() override;
 };
 
 

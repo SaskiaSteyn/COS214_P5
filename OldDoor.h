@@ -5,7 +5,7 @@
 
 class OldDoor : public DoorType{
     public:
-        void toggleDoor();
+        void toggleDoor() override;
 };
 
 

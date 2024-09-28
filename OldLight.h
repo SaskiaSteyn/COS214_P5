@@ -6,7 +6,7 @@
 class OldLight : public LightType{
 
     public:
-        void setLight();
+        void setLight() override;
 
 };
 

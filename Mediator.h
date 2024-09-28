@@ -8,20 +8,26 @@
 #include <iostream>
 using namespace std;
 
+class LightNode;
+class ThermoNode;
+class DoorNode;
+
 class Mediator {
     friend class LightNode;
     friend class DoorNode;
     friend class ThermoNode;
 
-    private:
+    protected:
         LightNode* lightHead;
         ThermoNode* thermoHead;
         DoorNode* doorHead;
+
     public:
+        Mediator() : lightHead(nullptr), thermoHead(nullptr), doorHead(nullptr) {}
         void notifyLights();
         void notifyThermo();
         void notifyDoor();
-        void handleReceivedMessage(string message);
+        void handleReceivedMessage(string& message);
 
 };
 
