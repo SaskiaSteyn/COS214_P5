@@ -1,15 +1,15 @@
 #ifndef CODE_LIGHTNODE_H
 #define CODE_LIGHTNODE_H
 
-#include "Integrator.h"
+#include "Mediator.h"
 
-class Integrator;
+class Mediator;
 
 class LightNode {
     public:
         LightNode();
-        LightNode(Integrator *node);
-        Integrator* light;
+        LightNode(Mediator *node);
+        Mediator* light;
         LightNode* next;
         LightNode* prev;
 

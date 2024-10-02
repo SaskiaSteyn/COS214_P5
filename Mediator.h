@@ -5,12 +5,12 @@
 #include "ThermoNode.h"
 #include "DoorNode.h"
 
+class DoorNode;
+class ThermoNode;
+class LightNode;
+
 #include <iostream>
 using namespace std;
-
-class LightNode;
-class ThermoNode;
-class DoorNode;
 
 class Mediator {
     friend class LightNode;

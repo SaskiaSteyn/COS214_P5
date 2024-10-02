@@ -4,6 +4,6 @@ LightNode::LightNode() {
 
 }
 
-LightNode::LightNode(Integrator *node) {
+LightNode::LightNode(Mediator *node) {
     this->light = node;
 }

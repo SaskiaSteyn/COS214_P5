@@ -1,14 +1,16 @@
 #ifndef CODE_THERMONODE_H
 #define CODE_THERMONODE_H
 
-#include "Integrator.h"
+#include "Mediator.h"
+
+class Mediator;
 
 class ThermoNode {
 
     public:
         ThermoNode();
-        ThermoNode(Integrator *thermo);
-        Integrator* thermo;
+        ThermoNode(Mediator *thermo);
+        Mediator* thermo;
         ThermoNode* next;
         ThermoNode* prev;
 
