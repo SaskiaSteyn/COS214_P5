@@ -4,6 +4,6 @@ ThermoNode::ThermoNode() {
 
 }
 
-ThermoNode::ThermoNode(Integrator *thermo) {
+ThermoNode::ThermoNode(Mediator *thermo) {
     this->thermo = thermo;
 }

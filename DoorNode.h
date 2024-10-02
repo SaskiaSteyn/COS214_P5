@@ -1,14 +1,16 @@
 #ifndef CODE_DOORNODE_H
 #define CODE_DOORNODE_H
 
-#include "Integrator.h"
+#include "Mediator.h"
+
+class Mediator;
 
 class DoorNode {
 
     public:
         DoorNode();
-        DoorNode(Integrator *door);
-        Integrator* door;
+        DoorNode(Mediator *door);
+        Mediator* door;
         DoorNode* next;
         DoorNode* prev;
 
