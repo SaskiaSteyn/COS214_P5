@@ -3,8 +3,13 @@
 
 #include "MacroEvent.h"
 
-class MovementObserver: public MacroEvent{
+class MovementObserver: public MacroEvent {
+    protected:
+        bool seesMovement;
     public:
+        MovementObserver(): seesMovement(false) {};
+        bool getMovement();
+        void toggleMovement();
         string sendMessage();
 };
 
