@@ -1,9 +1,11 @@
+#include "Mediator.h"
 #include "SmartLight.h"
 #include "OldLight.h"
 #include "SmartThermo.h"
 #include "OldThermo.h"
 #include "SmartDoor.h"
 #include "OldDoor.h"
+#include "LightIntegrator.h"
 
 #include <iostream>
 using namespace std;
@@ -13,19 +15,26 @@ void testingLight(){
     LightType* smartLight = new SmartLight();
     LightType* oldLight = new OldLight();
 
-    // Test toggling the light state for SmartLight
-    smartLight->setLight();
-    cout << "Smart light status: " << boolalpha << smartLight->getLight() << endl;
+    LightIntegrator *lightIntegrator = new LightIntegrator();
+    lightIntegrator->addLight(smartLight);
 
-    // Test toggling the light state for OldLight
-    oldLight->setLight();
-    cout << "Legacy light status: " << boolalpha << oldLight->getLight() << endl;
+    cout << "The state of the light is: " << lightIntegrator->getLight() << endl;
+    cout << "Changing the light state: " << endl;
+    lightIntegrator->setLight();
 
-    smartLight->setLight();
-    oldLight->setLight();
-
-    delete smartLight;
-    delete oldLight;
+    // // Test toggling the light state for SmartLight
+    // smartLight->setLight();
+    // cout << "Smart light status: " << boolalpha << smartLight->getLight() << endl;
+    //
+    // // Test toggling the light state for OldLight
+    // oldLight->setLight();
+    // cout << "Legacy light status: " << boolalpha << oldLight->getLight() << endl;
+    //
+    // smartLight->setLight();
+    // oldLight->setLight();
+    //
+    // delete smartLight;
+    // delete oldLight;
 }
 
 void testingThermostat(){
@@ -71,8 +80,8 @@ void testingDoors(){
 
 int main() {
     testingLight();
-    testingThermostat();
-    testingDoors();
+    // testingThermostat();
+    // testingDoors();
 
     return 0;
 }

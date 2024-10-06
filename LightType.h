@@ -1,9 +1,11 @@
 #ifndef CODE_LIGHTTYPE_H
 #define CODE_LIGHTTYPE_H
 
-#include "Integrator.h"
+#include <iostream>
 
-class LightType : public Integrator{
+using namespace std;
+
+class LightType {
     protected:
         bool lightOnOff;
 

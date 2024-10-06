@@ -29,6 +29,10 @@ class Mediator {
         void notifyDoor();
         void handleReceivedMessage(string& message);
 
+        void addLightNode(LightNode* light);
+        void addThermoNode(ThermoNode* thermo);
+        void addDoorNode(DoorNode* door);
+
 };
 
 

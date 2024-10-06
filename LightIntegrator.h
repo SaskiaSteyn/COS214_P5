@@ -2,10 +2,18 @@
 #define CODE_LIGHTINTEGRATOR_H
 
 #include "Integrator.h"
+#include "LightType.h"
+
+class LightType;
 
 class LightIntegrator : public Integrator{
+    protected:
+        LightType *light;
     public:
-        void addLight(Integrator* light);
+        LightIntegrator();
+        void addLight(LightType* newLight);
+        void setLight();
+        bool getLight();
 };
 
 

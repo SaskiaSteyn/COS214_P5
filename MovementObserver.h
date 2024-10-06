@@ -1,9 +1,11 @@
 #ifndef CODE_MOVEMENTOBSERVER_H
 #define CODE_MOVEMENTOBSERVER_H
 
+#include "MacroEvent.h"
 
-class MovementObserver {
-
+class MovementObserver: public MacroEvent{
+    public:
+        string sendMessage();
 };
 
 
