@@ -32,6 +32,8 @@ void testLightNodeConstructor(); // New prototype for LightNode constructor test
 void testTimeObserver();
 void testMovementObserver();
 void testSetLight();
+void testGetDoor();
+void testingMessageOnIntegrator();
 
 int main() {
     testLightIntegration();
@@ -46,24 +48,32 @@ int main() {
     testTimeObserver();
     testMovementObserver();
     testSetLight();
+    testGetDoor();
+    testingMessageOnIntegrator();
 
 
     return 0;
 }
 
 void testSetLight(){
-    LightType* smartLight = new SmartLight();
-
-    LightIntegrator *smartLightIntegrator = new LightIntegrator();
-    smartLightIntegrator->addLight(smartLight);
-
-    smartLight->setLight();
-    cout << "Smart light status: " << smartLight->getLight() << endl;
-
-    smartLight->setLight();
-
-    delete smartLightIntegrator;
+    LightType* light = new LightType;
+    light->setLight();
+    light->setLight();
 }
+
+void testGetDoor(){
+    DoorType* door = new DoorType;
+    door->getDoor();
+
+//    DoorIntegrator* doorIntegrator = new DoorIntegrator;
+//    doorIntegrator->getDoor();
+}
+
+void testingMessageOnIntegrator(){
+    Integrator* newIntegrator = new Integrator;
+    newIntegrator->receiveMessage("It is now day");
+}
+
 
 void testLightIntegration() {
     cout << "————————————————————————— Testing Light Integration —————————————————————————" << endl;
