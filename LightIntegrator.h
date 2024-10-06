@@ -11,6 +11,7 @@ class LightIntegrator : public Integrator{
         LightType *light;
     public:
         LightIntegrator();
+        ~LightIntegrator();
         void addLight(LightType* newLight);
         void setLight();
         bool getLight();

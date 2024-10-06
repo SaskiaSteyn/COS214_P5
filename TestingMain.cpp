@@ -15,26 +15,25 @@ void testingLight(){
     LightType* smartLight = new SmartLight();
     LightType* oldLight = new OldLight();
 
-    LightIntegrator *lightIntegrator = new LightIntegrator();
-    lightIntegrator->addLight(smartLight);
+    LightIntegrator *smartLightIntegrator = new LightIntegrator();
+    smartLightIntegrator->addLight(smartLight);
 
-    cout << "The state of the light is: " << lightIntegrator->getLight() << endl;
-    cout << "Changing the light state: " << endl;
-    lightIntegrator->setLight();
+    LightIntegrator *legacyLightIntegrator = new LightIntegrator();
+    legacyLightIntegrator->addLight(oldLight);
 
-    // // Test toggling the light state for SmartLight
-    // smartLight->setLight();
-    // cout << "Smart light status: " << boolalpha << smartLight->getLight() << endl;
-    //
-    // // Test toggling the light state for OldLight
-    // oldLight->setLight();
-    // cout << "Legacy light status: " << boolalpha << oldLight->getLight() << endl;
-    //
-    // smartLight->setLight();
-    // oldLight->setLight();
-    //
-    // delete smartLight;
-    // delete oldLight;
+    // Test toggling the light state for SmartLight
+    smartLight->setLight();
+    cout << "Smart light status: " << smartLight->getLight() << endl;
+
+    // Test toggling the light state for OldLight
+    oldLight->setLight();
+    cout << "Legacy light status: " << oldLight->getLight() << endl;
+
+    smartLight->setLight();
+    oldLight->setLight();
+
+    delete smartLightIntegrator;
+    delete legacyLightIntegrator;
 }
 
 void testingThermostat(){

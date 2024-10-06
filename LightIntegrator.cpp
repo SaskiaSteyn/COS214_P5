@@ -4,6 +4,10 @@ LightIntegrator::LightIntegrator() {
     this->light = nullptr;
 }
 
+LightIntegrator::~LightIntegrator() {
+    delete light;
+}
+
 void LightIntegrator::addLight(LightType* newLight) {
     this->light = newLight;
 }

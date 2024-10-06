@@ -23,3 +23,42 @@ void Mediator::handleReceivedMessage(string &message) {
     cout << "Notifying all smart and legacy devices to change state" << endl;
 
 }
+
+void Mediator::addLightNode(LightNode* light) {
+    if (lightHead == nullptr) {
+        lightHead = light;
+    }
+    else {
+        LightNode *current = lightHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = light;
+    }
+}
+
+void Mediator::addThermoNode(ThermoNode* thermo) {
+    if (thermoHead == nullptr) {
+        thermoHead = thermo;
+    }
+    else {
+        ThermoNode *current = thermoHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = thermo;
+    }
+}
+
+void Mediator::addDoorNode(DoorNode* door){
+    if (doorHead == nullptr) {
+        doorHead = door;
+    }
+    else {
+        DoorNode *current = doorHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = door;
+    }
+}
