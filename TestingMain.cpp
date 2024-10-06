@@ -12,6 +12,8 @@
 #include "AfternoonEvent.h"
 #include "EveningEvent.h"
 #include "NightEvent.h"
+#include "TimeObserver.h"
+#include "MovementObserver.h"
 
 #include <iostream>
 #include <memory> // For std::unique_ptr
@@ -27,6 +29,9 @@ void testMediatorAddNodes();
 void testMediatorNotifyMethods();
 void testNodeConstructors(); // New prototype for Node constructor tests
 void testLightNodeConstructor(); // New prototype for LightNode constructor test
+void testTimeObserver();
+void testMovementObserver();
+void testSetLight();
 
 int main() {
     testLightIntegration();
@@ -38,8 +43,26 @@ int main() {
     testMediatorNotifyMethods(); // New test for notify methods
     testNodeConstructors(); // New test for Node constructors
     testLightNodeConstructor(); // Test for LightNode constructor
+    testTimeObserver();
+    testMovementObserver();
+    testSetLight();
+
 
     return 0;
+}
+
+void testSetLight(){
+    LightType* smartLight = new SmartLight();
+
+    LightIntegrator *smartLightIntegrator = new LightIntegrator();
+    smartLightIntegrator->addLight(smartLight);
+
+    smartLight->setLight();
+    cout << "Smart light status: " << smartLight->getLight() << endl;
+
+    smartLight->setLight();
+
+    delete smartLightIntegrator;
 }
 
 void testLightIntegration() {
@@ -269,3 +292,59 @@ void testLightNodeConstructor() {
     // Cleanup
     delete lightIntegrator;
 }
+
+
+void testTimeObserver() {
+    cout << "————————————————————————— Testing TimeObserver —————————————————————————" << endl;
+
+    // Create a TimeObserver instance
+    TimeObserver timeObserver;
+
+    // Test initial time
+    cout << "Initial time: " << timeObserver.getTime() << endl; // Expecting 0 (morning)
+    cout << timeObserver.sendMessage() << endl; // Expecting "Time changed to morning"
+
+    // Advance to afternoon
+    timeObserver.advanceTime();
+    cout << "Advanced time: " << timeObserver.getTime() << endl; // Expecting 1 (afternoon)
+    cout << timeObserver.sendMessage() << endl; // Expecting "Time changed to afternoon"
+
+    // Advance to evening
+    timeObserver.advanceTime();
+    cout << "Advanced time: " << timeObserver.getTime() << endl; // Expecting 2 (evening)
+    cout << timeObserver.sendMessage() << endl; // Expecting "Time changed to evening"
+
+    // Advance to night
+    timeObserver.advanceTime();
+    cout << "Advanced time: " << timeObserver.getTime() << endl; // Expecting 3 (night)
+    cout << timeObserver.sendMessage() << endl; // Expecting "Time changed to night"
+
+    // Wrap around back to morning
+    timeObserver.advanceTime();
+    cout << "Advanced time: " << timeObserver.getTime() << endl; // Expecting 0 (morning)
+    cout << timeObserver.sendMessage() << endl; // Expecting "Time changed to morning"
+}
+
+
+void testMovementObserver() {
+    cout << "————————————————————————— Testing MovementObserver —————————————————————————" << endl;
+
+    // Create a MovementObserver instance
+    MovementObserver movementObserver;
+
+    // Test initial movement status
+    cout << "Initial movement detected: " << movementObserver.getMovement() << endl; // Expecting false (no movement)
+    cout << movementObserver.sendMessage() << endl; // Expecting "Turn off lights. Lock doors. Set temperature to 25"
+
+    // Toggle movement (simulate movement)
+    movementObserver.toggleMovement();
+    cout << "Movement detected: " << movementObserver.getMovement() << endl; // Expecting true (movement detected)
+    cout << movementObserver.sendMessage() << endl; // Expecting "Turn on lights. Unlock doors. Set temperature to 18"
+
+    // Toggle movement again (simulate no movement)
+    movementObserver.toggleMovement();
+    cout << "Movement detected: " << movementObserver.getMovement() << endl; // Expecting false (no movement)
+    cout << movementObserver.sendMessage() << endl; // Expecting "Turn off lights. Lock doors. Set temperature to 25"
+}
+
+
