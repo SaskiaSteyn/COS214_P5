@@ -4,6 +4,8 @@ DoorNode::DoorNode() {
 
 }
 
-DoorNode::DoorNode(Mediator *door) {
+DoorNode::DoorNode(Integrator *door) {
     this->door = door;
+    this->next = nullptr;
+    this->prev = nullptr;
 }

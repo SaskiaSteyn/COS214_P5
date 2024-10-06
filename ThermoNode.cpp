@@ -4,6 +4,8 @@ ThermoNode::ThermoNode() {
 
 }
 
-ThermoNode::ThermoNode(Mediator *thermo) {
+ThermoNode::ThermoNode(Integrator *thermo) {
     this->thermo = thermo;
+    this->next = nullptr;
+    this->prev = nullptr;
 }

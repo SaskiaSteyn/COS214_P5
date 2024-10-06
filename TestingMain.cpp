@@ -21,6 +21,10 @@ void testingLight(){
     LightIntegrator *legacyLightIntegrator = new LightIntegrator();
     legacyLightIntegrator->addLight(oldLight);
 
+    Mediator *mediator = new Mediator();
+    mediator->addLightNode(new LightNode(smartLightIntegrator));
+    mediator->addLightNode(new LightNode(legacyLightIntegrator));
+
     // Test toggling the light state for SmartLight
     smartLight->setLight();
     cout << "Smart light status: " << smartLight->getLight() << endl;

@@ -2,11 +2,14 @@
 #define CODE_INTEGRATOR_H
 
 #include "Mediator.h"
+#include <string>
 
-class Integrator : public Mediator{
+using namespace std;
+
+class Integrator {
 
     public:
-        void receiveMessage(string& message);
+        void receiveMessage(string message);
 
 };
 
