@@ -25,11 +25,21 @@ void Mediator::handleReceivedMessage(string message) {
 }
 
 void Mediator::addLightNode(LightNode* light) {
+//    if (lightHead == nullptr) {
+//        delete lightHead;
+//        lightHead = light;
+//    }
+//    else {
+//        LightNode *current = lightHead;
+//        while (current->next != nullptr) {
+//            current = current->next;
+//        }
+//        current->next = light;
+//    }
+
     if (lightHead == nullptr) {
-        delete lightHead;
-        lightHead = light;
-    }
-    else {
+        lightHead = light;  // Just assign without deleting
+    } else {
         LightNode *current = lightHead;
         while (current->next != nullptr) {
             current = current->next;
@@ -40,7 +50,8 @@ void Mediator::addLightNode(LightNode* light) {
 
 void Mediator::addThermoNode(ThermoNode* thermo) {
     if (thermoHead == nullptr) {
-        delete thermoHead;
+        //the below line causes problems
+//        delete thermoHead;
         thermoHead = thermo;
     }
     else {
@@ -54,7 +65,8 @@ void Mediator::addThermoNode(ThermoNode* thermo) {
 
 void Mediator::addDoorNode(DoorNode* door){
     if (doorHead == nullptr) {
-        delete doorHead;
+        //the below line causes problems
+        // delete doorHead;
         doorHead = door;
     }
     else {
