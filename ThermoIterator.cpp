@@ -1,6 +1,9 @@
 #include "ThermoIterator.h"
 
-ThermoIterator::ThermoIterator() {}
+ThermoIterator::ThermoIterator() {
+    head = nullptr;
+    current = nullptr;
+}
 
 ThermoIterator::ThermoIterator(ThermoNode *thermo) {
     this->current = thermo;
@@ -21,6 +24,7 @@ void ThermoIterator::reset() {
 void ThermoIterator::addNode(ThermoNode* newNode) {
     if (head == nullptr) {
         head = newNode;
+        current = newNode;
     } else {
         ThermoNode *current = head;
         while (current->next != nullptr) {

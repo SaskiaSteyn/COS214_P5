@@ -14,7 +14,9 @@ public:
         ~ThermoIntegrator();
         void addThermo(ThermoType* newThermo);
         void setThermo(float oldTemp, float newTemp);
-        float getThermo();
+        float getTemp();
+        virtual bool getDoor() {return false;};
+        virtual bool getLight() {return false;};
 
 };
 

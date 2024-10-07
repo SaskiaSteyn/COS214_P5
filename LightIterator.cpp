@@ -1,6 +1,9 @@
 #include "LightIterator.h"
 
-LightIterator::LightIterator() {}
+LightIterator::LightIterator() {
+    head = nullptr;
+    current = nullptr;
+}
 
 LightIterator::LightIterator(LightNode *node) {
     this->current = node;
@@ -20,6 +23,7 @@ void LightIterator::reset() {
 void LightIterator::addNode(LightNode* newNode) {
     if (head == nullptr) {
         head = newNode;
+        current = newNode;
     } else {
         LightNode *current = head;
         while (current->next != nullptr) {
