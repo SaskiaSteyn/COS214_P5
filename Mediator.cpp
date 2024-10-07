@@ -137,6 +137,7 @@ void Mediator::handleReceivedMessage(string message) {
         lightIteratorLivingArea->reset();
         lightIteratorLivingArea->goToNext();
         lightIteratorLivingArea->goToNext();
+        lightIteratorLivingArea->goToNext();
         if (!lightIteratorLivingArea->current->light->getLight()) {
             lightIteratorLivingArea->current->light->setLight();
         }
