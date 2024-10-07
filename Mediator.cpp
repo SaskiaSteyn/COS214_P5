@@ -1,5 +1,19 @@
+/**
+ * @file Mediator.cpp
+ * @author Johan
+ * @brief Mediator of the mediator pattern
+ * @version 0.1
+ * @date 2024-10-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "Mediator.h"
 
+/**
+ * @brief Construct a new Mediator:: Mediator object
+ * 
+ */
 Mediator::Mediator() {
     lightIteratorLivingArea = new LightIterator();
     lightIteratorBedrooms = new LightIterator();
@@ -12,6 +26,11 @@ Mediator::Mediator() {
 }
 
 
+/**
+ * @brief Notify the lights to change state
+ * 
+ * @param state 
+ */
 void Mediator::notifyLights(bool state) {
 
     lightIteratorLivingArea->reset();
@@ -43,6 +62,11 @@ void Mediator::notifyLights(bool state) {
     // cout << "Notifying all light nodes..." << endl;
 }
 
+/**
+ * @brief Notify the thermo to change state
+ * 
+ * @param temp 
+ */
 void Mediator::notifyThermo(float temp) {
 
     float newTemp = temp - thermoIteratorLivingArea->head->thermo->getTemp();
@@ -59,6 +83,11 @@ void Mediator::notifyThermo(float temp) {
 
 }
 
+/**
+ * @brief Notify the doors to change state
+ * 
+ * @param state 
+ */
 void Mediator::notifyDoor(bool state) {
 
     doorIteratorBedrooms->reset();
@@ -80,6 +109,11 @@ void Mediator::notifyDoor(bool state) {
     // cout << "Notifying all door nodes..." << endl;
 }
 
+/**
+ * @brief Handle the received message
+ * 
+ * @param message 
+ */
 void Mediator::handleReceivedMessage(string message) {
 
     // cout << "Message has been recieved: " << message << endl;
@@ -160,26 +194,56 @@ void Mediator::handleReceivedMessage(string message) {
     }
 }
 
+/**
+ * @brief Add a new living area light node
+ * 
+ * @param light 
+ */
 void Mediator::addLivingAreaLightNode(LightNode* light) {
     lightIteratorLivingArea->addNode(light);
 }
 
+/**
+ * @brief Add a new bedrooms light node
+ * 
+ * @param light 
+ */
 void Mediator::addBedroomsLightNode(LightNode* light) {
     lightIteratorBedrooms->addNode(light);
 }
 
+/**
+ * @brief Add a new living area thermo node
+ * 
+ * @param thermo 
+ */
 void Mediator::addLivingAreaThermoNode(ThermoNode* thermo) {
     thermoIteratorLivingArea->addNode(thermo);
 }
 
+/**
+ * @brief Add a new bedrooms thermo node
+ * 
+ * @param thermo 
+ */
 void Mediator::addBedroomsThermoNode(ThermoNode* thermo) {
     thermoIteratorBedrooms->addNode(thermo);
 }
 
+/**
+ * @brief Add a new living area door node
+ * 
+ * @param door 
+ */
 void Mediator::addLivingAreaDoorNode(DoorNode* door) {
     doorIteratorLivingArea->addNode(door);
 }
 
+/**
+ * @brief Add a new bedrooms door node
+ * 
+ * @param door 
+ */
 void Mediator::addBedroomsDoorNode(DoorNode* door) {
     doorIteratorBedrooms->addNode(door);
 }

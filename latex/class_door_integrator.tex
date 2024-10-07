@@ -9,20 +9,36 @@ Inheritance diagram for Door\+Integrator\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_door_integrator_a7b52fc67e69144ad6ff3b6a72fdf154a}\label{class_door_integrator_a7b52fc67e69144ad6ff3b6a72fdf154a} 
-void {\bfseries add\+Door} (\mbox{\hyperlink{class_door_type}{Door\+Type}} \texorpdfstring{$\ast$}{*}new\+Door)
-\item 
+\Hypertarget{class_door_integrator_a2ea4a96a422ebb658ce0aeff33cbf037}\label{class_door_integrator_a2ea4a96a422ebb658ce0aeff33cbf037} 
+{\bfseries Door\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Door \doxylink{class_integrator}{Integrator}\+:\+: Door \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_door_integrator_a4121a1dc3ac2db5c1c6ec99b0e9a6b63}\label{class_door_integrator_a4121a1dc3ac2db5c1c6ec99b0e9a6b63} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Door\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Door \doxylink{class_integrator}{Integrator}\+:\+: Door \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_door_integrator_a7b52fc67e69144ad6ff3b6a72fdf154a}{add\+Door}} (\mbox{\hyperlink{class_door_type}{Door\+Type}} \texorpdfstring{$\ast$}{*}new\+Door)
+\begin{DoxyCompactList}\small\item\em creates a new door object \end{DoxyCompactList}\item 
 \Hypertarget{class_door_integrator_a0c076611a9eafdf34231d774e9f3fba1}\label{class_door_integrator_a0c076611a9eafdf34231d774e9f3fba1} 
 void {\bfseries set\+Door} ()
+\begin{DoxyCompactList}\small\item\em sets the door state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac}{get\+Door}} ()
+\begin{DoxyCompactList}\small\item\em returns the door state \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_door_integrator_ac073fd01e060c2bd1c77268bc1e8ceff}{get\+Light}} ()
 \item 
-\Hypertarget{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac}\label{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac} 
-bool {\bfseries get\+Door} ()
+virtual float \mbox{\hyperlink{class_door_integrator_aab4e0d7d8935f0b8783642394080065f}{get\+Temp}} ()
+\item 
+virtual void \mbox{\hyperlink{class_door_integrator_a69ac22ea8d1c962e1e34476cc5ebcb4a}{set\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_door_integrator_aff16580589b04fa1cc0f3969e5afff53}{toggle\+Door}} ()
+\item 
+virtual void \mbox{\hyperlink{class_door_integrator_ab4662e3b30097d1ab4eba76590b402ec}{increase\+Temp}} (float new\+Temp)
+\item 
+virtual void \mbox{\hyperlink{class_door_integrator_a16708ab709010a944c3f688136e1664a}{decrease\+Temp}} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries receive\+Message} (string message)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,7 +47,104 @@ void {\bfseries receive\+Message} (string message)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_door_integrator_a7b52fc67e69144ad6ff3b6a72fdf154a}\index{DoorIntegrator@{DoorIntegrator}!addDoor@{addDoor}}
+\index{addDoor@{addDoor}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{addDoor()}{addDoor()}}
+{\footnotesize\ttfamily \label{class_door_integrator_a7b52fc67e69144ad6ff3b6a72fdf154a} 
+void Door\+Integrator\+::add\+Door (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_door_type}{Door\+Type}} \texorpdfstring{$\ast$}{*}}]{new\+Door}{}\end{DoxyParamCaption})}
+
+
+
+creates a new door object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Door} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_door_integrator_a16708ab709010a944c3f688136e1664a}\index{DoorIntegrator@{DoorIntegrator}!decreaseTemp@{decreaseTemp}}
+\index{decreaseTemp@{decreaseTemp}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{decreaseTemp()}{decreaseTemp()}}
+{\footnotesize\ttfamily \label{class_door_integrator_a16708ab709010a944c3f688136e1664a} 
+virtual void Door\+Integrator\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac}\index{DoorIntegrator@{DoorIntegrator}!getDoor@{getDoor}}
+\index{getDoor@{getDoor}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{getDoor()}{getDoor()}}
+{\footnotesize\ttfamily \label{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac} 
+bool Door\+Integrator\+::get\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the door state 
+
+\begin{DoxyReturn}{Returns}
+true if the door is open 
+
+false if the door is closed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_ac073fd01e060c2bd1c77268bc1e8ceff}\index{DoorIntegrator@{DoorIntegrator}!getLight@{getLight}}
+\index{getLight@{getLight}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{getLight()}{getLight()}}
+{\footnotesize\ttfamily \label{class_door_integrator_ac073fd01e060c2bd1c77268bc1e8ceff} 
+virtual bool Door\+Integrator\+::get\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_aab4e0d7d8935f0b8783642394080065f}\index{DoorIntegrator@{DoorIntegrator}!getTemp@{getTemp}}
+\index{getTemp@{getTemp}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{getTemp()}{getTemp()}}
+{\footnotesize\ttfamily \label{class_door_integrator_aab4e0d7d8935f0b8783642394080065f} 
+virtual float Door\+Integrator\+::get\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_ab4662e3b30097d1ab4eba76590b402ec}\index{DoorIntegrator@{DoorIntegrator}!increaseTemp@{increaseTemp}}
+\index{increaseTemp@{increaseTemp}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{increaseTemp()}{increaseTemp()}}
+{\footnotesize\ttfamily \label{class_door_integrator_ab4662e3b30097d1ab4eba76590b402ec} 
+virtual void Door\+Integrator\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_a69ac22ea8d1c962e1e34476cc5ebcb4a}\index{DoorIntegrator@{DoorIntegrator}!setLight@{setLight}}
+\index{setLight@{setLight}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{setLight()}{setLight()}}
+{\footnotesize\ttfamily \label{class_door_integrator_a69ac22ea8d1c962e1e34476cc5ebcb4a} 
+virtual void Door\+Integrator\+::set\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_door_integrator_aff16580589b04fa1cc0f3969e5afff53}\index{DoorIntegrator@{DoorIntegrator}!toggleDoor@{toggleDoor}}
+\index{toggleDoor@{toggleDoor}!DoorIntegrator@{DoorIntegrator}}
+\doxysubsubsection{\texorpdfstring{toggleDoor()}{toggleDoor()}}
+{\footnotesize\ttfamily \label{class_door_integrator_aff16580589b04fa1cc0f3969e5afff53} 
+virtual void Door\+Integrator\+::toggle\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Door\+Integrator.\+h\item 
-Door\+Integrator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_door_integrator_8cpp}{Door\+Integrator.\+cpp}}\end{DoxyCompactItemize}

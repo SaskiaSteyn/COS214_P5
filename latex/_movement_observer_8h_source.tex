@@ -5,18 +5,22 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODE\_MOVEMENTOBSERVER\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MacroEvent.h"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_observer}{MovementObserver}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_macro_event}{MacroEvent}}\ \{}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ seesMovement;}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_movement_observer}{MovementObserver}}():\ seesMovement(\textcolor{keyword}{false})\ \{\};}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ getMovement();}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleMovement();}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ sendMessage();}
-\DoxyCodeLine{00014\ \};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_MOVEMENTOBSERVER\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Mediator.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_observer}{MovementObserver}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ seesMovement;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mediator}{Mediator}}\ *mediator;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_movement_observer_ae2373d64a46ecc7dfa85c490f494812b}{MovementObserver}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_movement_observer_ae2373d64a46ecc7dfa85c490f494812b}{MovementObserver}}(\mbox{\hyperlink{class_mediator}{Mediator}}\ *newMediator);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_movement_observer_a382bc6e820b0538c089134f0b963985a}{getMovement}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_movement_observer_ac03ee6190969659801c1f040a5156741}{toggleMovement}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_movement_observer_a761360af96db77cfa5b2d591b5b4f544}{sendMessage}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_movement_observer_a3b7a59826072853123fa0f8645272094}{sendCustomMessage}}(\textcolor{keywordtype}{string}\ message);}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_MOVEMENTOBSERVER\_H}}
 
 \end{DoxyCode}

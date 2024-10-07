@@ -9,11 +9,27 @@ Inheritance diagram for Light\+Type\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b}\label{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b} 
-virtual void {\bfseries set\+Light} ()
+\Hypertarget{class_light_type_a8d8f4dd4e185552e6f70634a1dd10a3d}\label{class_light_type_a8d8f4dd4e185552e6f70634a1dd10a3d} 
+{\bfseries Light\+Type} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Light Type\+:\+: Light Type object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b}{set\+Light}} ()
+\begin{DoxyCompactList}\small\item\em sets the light state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a}{get\+Light}} ()
+\begin{DoxyCompactList}\small\item\em gets the state of the light \end{DoxyCompactList}\item 
+\Hypertarget{class_light_type_a8116f450065c49b570c737dea56753e5}\label{class_light_type_a8116f450065c49b570c737dea56753e5} 
+float {\bfseries get\+Temp} ()
 \item 
-\Hypertarget{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a}\label{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a} 
-bool {\bfseries get\+Light} ()
+\Hypertarget{class_light_type_a6c4b885e87360fb1dc57ee6d61a39286}\label{class_light_type_a6c4b885e87360fb1dc57ee6d61a39286} 
+bool {\bfseries get\+Door} ()
+\item 
+\Hypertarget{class_light_type_a935500523fcaee6c57d37a14f1838a72}\label{class_light_type_a935500523fcaee6c57d37a14f1838a72} 
+virtual void {\bfseries toggle\+Door} ()
+\item 
+\Hypertarget{class_light_type_aebba530f15e74905783ba7b2df3f0bd2}\label{class_light_type_aebba530f15e74905783ba7b2df3f0bd2} 
+virtual void {\bfseries increase\+Temp} (float new\+Temp)
+\item 
+\Hypertarget{class_light_type_a6b96fcde2080cc2eee98600b0c0caead}\label{class_light_type_a6b96fcde2080cc2eee98600b0c0caead} 
+virtual void {\bfseries decrease\+Temp} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -23,7 +39,39 @@ bool {\bfseries light\+On\+Off}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a}\index{LightType@{LightType}!getLight@{getLight}}
+\index{getLight@{getLight}!LightType@{LightType}}
+\doxysubsubsection{\texorpdfstring{getLight()}{getLight()}}
+{\footnotesize\ttfamily \label{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a} 
+bool Light\+Type\+::get\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+gets the state of the light 
+
+\begin{DoxyReturn}{Returns}
+true if the light is on 
+
+false if the light is off 
+\end{DoxyReturn}
+\Hypertarget{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b}\index{LightType@{LightType}!setLight@{setLight}}
+\index{setLight@{setLight}!LightType@{LightType}}
+\doxysubsubsection{\texorpdfstring{setLight()}{setLight()}}
+{\footnotesize\ttfamily \label{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b} 
+void Light\+Type\+::set\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets the light state 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_old_light_ac371e9ade5055736e332f82b554b8af6}{Old\+Light}}, and \mbox{\hyperlink{class_smart_light_aeca2e89104cb21ed51f1079631c0b153}{Smart\+Light}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Light\+Type.\+h\item 
-Light\+Type.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_light_type_8cpp}{Light\+Type.\+cpp}}\end{DoxyCompactItemize}

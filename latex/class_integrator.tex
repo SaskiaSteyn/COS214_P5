@@ -9,12 +9,113 @@ Inheritance diagram for Integrator\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}\label{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b} 
-void {\bfseries receive\+Message} (string message)
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_integrator_a19ee538a85cd84d2d7c855e29d358263}{get\+Door}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_integrator_ae00c4b08c8ad959f8670ed3b51efc9f9}{get\+Light}} ()=0
+\item 
+virtual float \mbox{\hyperlink{class_integrator_ab13b973a6cacfb269a9af693cfb202d7}{get\+Temp}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_integrator_a949633ea983db5528f75e1eb140d6e6a}{set\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_integrator_a34fdb5b8432c2ca6c2f242829a7f2bd0}{toggle\+Door}} ()
+\item 
+virtual void \mbox{\hyperlink{class_integrator_a305c31b30bf1e708ddae62a7a9de7e51}{increase\+Temp}} (float new\+Temp)=0
+\item 
+virtual void \mbox{\hyperlink{class_integrator_abdb92e1eb6f9ccb0840169b73a89d38f}{decrease\+Temp}} (float new\+Temp)=0
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_integrator_abdb92e1eb6f9ccb0840169b73a89d38f}\index{Integrator@{Integrator}!decreaseTemp@{decreaseTemp}}
+\index{decreaseTemp@{decreaseTemp}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{decreaseTemp()}{decreaseTemp()}}
+{\footnotesize\ttfamily \label{class_integrator_abdb92e1eb6f9ccb0840169b73a89d38f} 
+virtual void Integrator\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_old_thermo_a941d523fae052aa41515c46f167f06b6}{Old\+Thermo}}, \mbox{\hyperlink{class_smart_thermo_a6e56c507e4522d5726f55650343de4a3}{Smart\+Thermo}}, and \mbox{\hyperlink{class_thermo_type_ae794e25c23522eb8ab1e41fbb4dcaf96}{Thermo\+Type}}.
+
+\Hypertarget{class_integrator_a19ee538a85cd84d2d7c855e29d358263}\index{Integrator@{Integrator}!getDoor@{getDoor}}
+\index{getDoor@{getDoor}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{getDoor()}{getDoor()}}
+{\footnotesize\ttfamily \label{class_integrator_a19ee538a85cd84d2d7c855e29d358263} 
+virtual bool Integrator\+::get\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_door_integrator_a8791d0c628a491dc00bfb108f85bf2ac}{Door\+Integrator}}, and \mbox{\hyperlink{class_door_type_a73547a4c506efedefb89fb7be12d757d}{Door\+Type}}.
+
+\Hypertarget{class_integrator_ae00c4b08c8ad959f8670ed3b51efc9f9}\index{Integrator@{Integrator}!getLight@{getLight}}
+\index{getLight@{getLight}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{getLight()}{getLight()}}
+{\footnotesize\ttfamily \label{class_integrator_ae00c4b08c8ad959f8670ed3b51efc9f9} 
+virtual bool Integrator\+::get\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_light_integrator_ae257f4405bb5c07143f53008c82fd725}{Light\+Integrator}}.
+
+\Hypertarget{class_integrator_ab13b973a6cacfb269a9af693cfb202d7}\index{Integrator@{Integrator}!getTemp@{getTemp}}
+\index{getTemp@{getTemp}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{getTemp()}{getTemp()}}
+{\footnotesize\ttfamily \label{class_integrator_ab13b973a6cacfb269a9af693cfb202d7} 
+virtual float Integrator\+::get\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_thermo_integrator_aedf697e29341438e4e68c5bc40ed6fc0}{Thermo\+Integrator}}, and \mbox{\hyperlink{class_thermo_type_a42b7ddec9cb73ec9cd782eb45360e44c}{Thermo\+Type}}.
+
+\Hypertarget{class_integrator_a305c31b30bf1e708ddae62a7a9de7e51}\index{Integrator@{Integrator}!increaseTemp@{increaseTemp}}
+\index{increaseTemp@{increaseTemp}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{increaseTemp()}{increaseTemp()}}
+{\footnotesize\ttfamily \label{class_integrator_a305c31b30bf1e708ddae62a7a9de7e51} 
+virtual void Integrator\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_old_thermo_a67d616306348aff5372f9f1655218cca}{Old\+Thermo}}, \mbox{\hyperlink{class_smart_thermo_a64c4b812828a4e52855be953c820eb6b}{Smart\+Thermo}}, and \mbox{\hyperlink{class_thermo_type_a10363d88b4ee7227eb3a7b045055105b}{Thermo\+Type}}.
+
+\Hypertarget{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}\index{Integrator@{Integrator}!receiveMessage@{receiveMessage}}
+\index{receiveMessage@{receiveMessage}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{receiveMessage()}{receiveMessage()}}
+{\footnotesize\ttfamily \label{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b} 
+void Integrator\+::receive\+Message (\begin{DoxyParamCaption}\item[{string}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Receive a message from the macro event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_integrator_a949633ea983db5528f75e1eb140d6e6a}\index{Integrator@{Integrator}!setLight@{setLight}}
+\index{setLight@{setLight}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{setLight()}{setLight()}}
+{\footnotesize\ttfamily \label{class_integrator_a949633ea983db5528f75e1eb140d6e6a} 
+virtual void Integrator\+::set\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b}{Light\+Integrator}}.
+
+\Hypertarget{class_integrator_a34fdb5b8432c2ca6c2f242829a7f2bd0}\index{Integrator@{Integrator}!toggleDoor@{toggleDoor}}
+\index{toggleDoor@{toggleDoor}!Integrator@{Integrator}}
+\doxysubsubsection{\texorpdfstring{toggleDoor()}{toggleDoor()}}
+{\footnotesize\ttfamily \label{class_integrator_a34fdb5b8432c2ca6c2f242829a7f2bd0} 
+virtual void Integrator\+::toggle\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_door_type_aca367dd8f2334ef8697c57575380a1c0}{Door\+Type}}, \mbox{\hyperlink{class_old_door_a618001c106ccd80febed6cd42b3f2578}{Old\+Door}}, and \mbox{\hyperlink{class_smart_door_a21d37cd898d76fcd5fc1273e92a8260f}{Smart\+Door}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Integrator.\+h\item 
-Integrator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_integrator_8cpp}{Integrator.\+cpp}}\end{DoxyCompactItemize}

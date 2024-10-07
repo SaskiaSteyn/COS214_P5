@@ -1,9 +1,28 @@
+/**
+ * @file OldThermo.cpp
+ * @author Saskia
+ * @brief Concrete Product of the template class (ThermoType)
+ * @version 0.1
+ * @date 2024-10-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "OldThermo.h"
 
+/**
+ * @brief Construct a new Old Thermo:: Old Thermo object
+ * 
+ */
 OldThermo::OldThermo(float initialTemp) : ThermoType(initialTemp) {
 
 }
 
+/**
+ * @brief Increase the temperature
+ * 
+ * @param newTemp 
+ */
 void OldThermo::increaseTemp(float newTemp) {
     if (newTemp > temp) {
         temp = newTemp;
@@ -13,6 +32,11 @@ void OldThermo::increaseTemp(float newTemp) {
     }
 }
 
+/**
+ * @brief Decrease the temperature
+ * 
+ * @param newTemp 
+ */
 void OldThermo::decreaseTemp(float newTemp) {
     if (newTemp < temp) {
         temp = newTemp;

@@ -7,21 +7,24 @@
 \DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ "{}Integrator.h"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DoorNode.h"{}}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mediator}{Mediator}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_door_node}{DoorNode}};}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_door_iterator}{DoorIterator}}\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mediator}{Mediator}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_door_node}{DoorNode}};}
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ current;}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ head;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_iterator}{DoorIterator}}(\mbox{\hyperlink{class_door_node}{DoorNode}}\ *door);}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ goToNext();}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ reset();}
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_DOORITERATOR\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ current;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ head;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_iterator_af23ae3d20fb44c78b6a4b35e70e9505d}{DoorIterator}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_iterator_af23ae3d20fb44c78b6a4b35e70e9505d}{DoorIterator}}(\mbox{\hyperlink{class_door_node}{DoorNode}}\ *door);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_door_node}{DoorNode}}*\ \mbox{\hyperlink{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086}{goToNext}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_door_iterator_ab3de298b2c71ba10d2729abb1c1f5f9d}{reset}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_door_iterator_ad794603d39241fd9fe9dc030893ce435}{addNode}}(\mbox{\hyperlink{class_door_node}{DoorNode}}*\ newNode);}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_DOORITERATOR\_H}}
 
 \end{DoxyCode}

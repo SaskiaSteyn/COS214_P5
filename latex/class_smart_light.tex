@@ -10,11 +10,23 @@ Inheritance diagram for Smart\+Light\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_smart_light_aeca2e89104cb21ed51f1079631c0b153}{set\+Light}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a new Smart Light\+:\+: Smart Light object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_light_type}{Light\+Type}}}
 \begin{DoxyCompactItemize}
 \item 
-bool {\bfseries get\+Light} ()
+{\bfseries Light\+Type} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Light Type\+:\+: Light Type object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_light_type_a1bd558c85aeb5e8cd90f6e745e66098a}{get\+Light}} ()
+\begin{DoxyCompactList}\small\item\em gets the state of the light \end{DoxyCompactList}\item 
+float {\bfseries get\+Temp} ()
+\item 
+bool {\bfseries get\+Door} ()
+\item 
+virtual void {\bfseries toggle\+Door} ()
+\item 
+virtual void {\bfseries increase\+Temp} (float new\+Temp)
+\item 
+virtual void {\bfseries decrease\+Temp} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_light_type}{Light\+Type}}}
@@ -33,11 +45,15 @@ void Smart\+Light\+::set\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapti
 
 
 
-Reimplemented from \mbox{\hyperlink{class_light_type}{Light\+Type}}.
+Construct a new Smart Light\+:\+: Smart Light object. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_light_type_a62ef8a7781c2eaa34ad77a2e5395065b}{Light\+Type}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Smart\+Light.\+h\item 
-Smart\+Light.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_smart_light_8cpp}{Smart\+Light.\+cpp}}\end{DoxyCompactItemize}

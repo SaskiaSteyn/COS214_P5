@@ -3,16 +3,19 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_door_iterator_a7e9594d34df77ff6dbd9f5baf339ed16}\label{class_door_iterator_a7e9594d34df77ff6dbd9f5baf339ed16} 
-{\bfseries Door\+Iterator} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}door)
-\item 
-\Hypertarget{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086}\label{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086} 
-\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*} {\bfseries go\+To\+Next} ()
-\item 
+\Hypertarget{class_door_iterator_af23ae3d20fb44c78b6a4b35e70e9505d}\label{class_door_iterator_af23ae3d20fb44c78b6a4b35e70e9505d} 
+{\bfseries Door\+Iterator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Door Iterator\+:\+: Door Iterator object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_door_iterator_a7e9594d34df77ff6dbd9f5baf339ed16}{Door\+Iterator}} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}door)
+\begin{DoxyCompactList}\small\item\em Construct a new Door Iterator\+:\+: Door Iterator object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086}{go\+To\+Next}} ()
+\begin{DoxyCompactList}\small\item\em go to the next door in the room/section \end{DoxyCompactList}\item 
 \Hypertarget{class_door_iterator_ab3de298b2c71ba10d2729abb1c1f5f9d}\label{class_door_iterator_ab3de298b2c71ba10d2729abb1c1f5f9d} 
 void {\bfseries reset} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactList}\small\item\em reset the iterator to the first door in the room/section \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_door_iterator_ad794603d39241fd9fe9dc030893ce435}{add\+Node}} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}new\+Node)
+\begin{DoxyCompactList}\small\item\em Adds a new door to the room/section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_door_iterator_a3b7092f61bda6364de90eeac16f37be8}\label{class_door_iterator_a3b7092f61bda6364de90eeac16f37be8} 
@@ -24,12 +27,61 @@ void {\bfseries reset} ()
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_door_iterator_a67a2e14c9f332d40bea3c2710442ae1f}\label{class_door_iterator_a67a2e14c9f332d40bea3c2710442ae1f} 
-class {\bfseries Mediator}
+\Hypertarget{class_door_iterator_a3bbc1d373bdcda0f9f1d045b7c540414}\label{class_door_iterator_a3bbc1d373bdcda0f9f1d045b7c540414} 
+class {\bfseries Door\+Node}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_door_iterator_a7e9594d34df77ff6dbd9f5baf339ed16}\index{DoorIterator@{DoorIterator}!DoorIterator@{DoorIterator}}
+\index{DoorIterator@{DoorIterator}!DoorIterator@{DoorIterator}}
+\doxysubsubsection{\texorpdfstring{DoorIterator()}{DoorIterator()}}
+{\footnotesize\ttfamily \label{class_door_iterator_a7e9594d34df77ff6dbd9f5baf339ed16} 
+Door\+Iterator\+::\+Door\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}}]{door}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new Door Iterator\+:\+: Door Iterator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em door} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_door_iterator_ad794603d39241fd9fe9dc030893ce435}\index{DoorIterator@{DoorIterator}!addNode@{addNode}}
+\index{addNode@{addNode}!DoorIterator@{DoorIterator}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily \label{class_door_iterator_ad794603d39241fd9fe9dc030893ce435} 
+void Door\+Iterator\+::add\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}}]{new\+Node}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new door to the room/section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Node} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086}\index{DoorIterator@{DoorIterator}!goToNext@{goToNext}}
+\index{goToNext@{goToNext}!DoorIterator@{DoorIterator}}
+\doxysubsubsection{\texorpdfstring{goToNext()}{goToNext()}}
+{\footnotesize\ttfamily \label{class_door_iterator_ad2cdb3e69f79b84b32a97b7bac679086} 
+\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*} Door\+Iterator\+::go\+To\+Next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+go to the next door in the room/section 
+
+\begin{DoxyReturn}{Returns}
+Door\+Node\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Door\+Iterator.\+h\item 
-Door\+Iterator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_door_iterator_8cpp}{Door\+Iterator.\+cpp}}\end{DoxyCompactItemize}

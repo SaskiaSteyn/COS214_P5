@@ -1,45 +1,86 @@
 \doxysection{Movement\+Observer Class Reference}
 \hypertarget{class_movement_observer}{}\label{class_movement_observer}\index{MovementObserver@{MovementObserver}}
-Inheritance diagram for Movement\+Observer\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_movement_observer}
-\end{center}
-\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_movement_observer_a382bc6e820b0538c089134f0b963985a}\label{class_movement_observer_a382bc6e820b0538c089134f0b963985a} 
-bool {\bfseries get\+Movement} ()
-\item 
+\Hypertarget{class_movement_observer_ae2373d64a46ecc7dfa85c490f494812b}\label{class_movement_observer_ae2373d64a46ecc7dfa85c490f494812b} 
+{\bfseries Movement\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Movement Observer\+:\+: Movement Observer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_movement_observer_a76a5c04c8956e5352085ebdeebaa25b0}{Movement\+Observer}} (\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*}new\+Mediator)
+\begin{DoxyCompactList}\small\item\em Construct a new Movement Observer\+:\+: Movement Observer object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_movement_observer_a382bc6e820b0538c089134f0b963985a}{get\+Movement}} ()
+\begin{DoxyCompactList}\small\item\em Get the Movement object. \end{DoxyCompactList}\item 
 \Hypertarget{class_movement_observer_ac03ee6190969659801c1f040a5156741}\label{class_movement_observer_ac03ee6190969659801c1f040a5156741} 
 void {\bfseries toggle\+Movement} ()
-\item 
-string \mbox{\hyperlink{class_movement_observer_a2e9d0e0acf35658c6049a1d638bef8fb}{send\+Message}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_macro_event}{Macro\+Event}}}
+\begin{DoxyCompactList}\small\item\em Toggle the movement state. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_observer_a761360af96db77cfa5b2d591b5b4f544}\label{class_movement_observer_a761360af96db77cfa5b2d591b5b4f544} 
+void {\bfseries send\+Message} ()
+\begin{DoxyCompactList}\small\item\em Send message to the integrator class to change the state of the devices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_movement_observer_a3b7a59826072853123fa0f8645272094}{send\+Custom\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Send a custom message to the mediator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_movement_observer_a73ba23aed113aaa3eec86f9c1aa424bf}\label{class_movement_observer_a73ba23aed113aaa3eec86f9c1aa424bf} 
 bool {\bfseries sees\+Movement}
+\item 
+\Hypertarget{class_movement_observer_a5ddf887111e6e1a07b89097aa6c07b91}\label{class_movement_observer_a5ddf887111e6e1a07b89097aa6c07b91} 
+\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*} {\bfseries mediator}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_movement_observer_a76a5c04c8956e5352085ebdeebaa25b0}\index{MovementObserver@{MovementObserver}!MovementObserver@{MovementObserver}}
+\index{MovementObserver@{MovementObserver}!MovementObserver@{MovementObserver}}
+\doxysubsubsection{\texorpdfstring{MovementObserver()}{MovementObserver()}}
+{\footnotesize\ttfamily \label{class_movement_observer_a76a5c04c8956e5352085ebdeebaa25b0} 
+Movement\+Observer\+::\+Movement\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*}}]{new\+Mediator}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new Movement Observer\+:\+: Movement Observer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Mediator} & \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_movement_observer_a2e9d0e0acf35658c6049a1d638bef8fb}\index{MovementObserver@{MovementObserver}!sendMessage@{sendMessage}}
-\index{sendMessage@{sendMessage}!MovementObserver@{MovementObserver}}
-\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
-{\footnotesize\ttfamily \label{class_movement_observer_a2e9d0e0acf35658c6049a1d638bef8fb} 
-string Movement\+Observer\+::send\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\Hypertarget{class_movement_observer_a382bc6e820b0538c089134f0b963985a}\index{MovementObserver@{MovementObserver}!getMovement@{getMovement}}
+\index{getMovement@{getMovement}!MovementObserver@{MovementObserver}}
+\doxysubsubsection{\texorpdfstring{getMovement()}{getMovement()}}
+{\footnotesize\ttfamily \label{class_movement_observer_a382bc6e820b0538c089134f0b963985a} 
+bool Movement\+Observer\+::get\+Movement (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Implements \mbox{\hyperlink{class_macro_event}{Macro\+Event}}.
+Get the Movement object. 
 
+\begin{DoxyReturn}{Returns}
+true if movement is detected 
+
+false if no movement is detected 
+\end{DoxyReturn}
+\Hypertarget{class_movement_observer_a3b7a59826072853123fa0f8645272094}\index{MovementObserver@{MovementObserver}!sendCustomMessage@{sendCustomMessage}}
+\index{sendCustomMessage@{sendCustomMessage}!MovementObserver@{MovementObserver}}
+\doxysubsubsection{\texorpdfstring{sendCustomMessage()}{sendCustomMessage()}}
+{\footnotesize\ttfamily \label{class_movement_observer_a3b7a59826072853123fa0f8645272094} 
+void Movement\+Observer\+::send\+Custom\+Message (\begin{DoxyParamCaption}\item[{string}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Send a custom message to the mediator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Movement\+Observer.\+h\item 
-Movement\+Observer.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_movement_observer_8cpp}{Movement\+Observer.\+cpp}}\end{DoxyCompactItemize}

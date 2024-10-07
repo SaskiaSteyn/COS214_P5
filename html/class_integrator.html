@@ -87,7 +87,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_integrator-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Integrator Class Reference</div></div>
+  <div class="headertitle"><div class="title">Integrator Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -110,13 +110,242 @@ Inheritance diagram for Integrator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac9723d2be9cff0d1c0bb19fef1ed829b" id="r_ac9723d2be9cff0d1c0bb19fef1ed829b"><td class="memItemLeft" align="right" valign="top"><a id="ac9723d2be9cff0d1c0bb19fef1ed829b" name="ac9723d2be9cff0d1c0bb19fef1ed829b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>receiveMessage</b> (string message)</td></tr>
+<tr class="memitem:ac9723d2be9cff0d1c0bb19fef1ed829b" id="r_ac9723d2be9cff0d1c0bb19fef1ed829b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9723d2be9cff0d1c0bb19fef1ed829b">receiveMessage</a> (string message)</td></tr>
+<tr class="memdesc:ac9723d2be9cff0d1c0bb19fef1ed829b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a message from the macro event.  <br /></td></tr>
 <tr class="separator:ac9723d2be9cff0d1c0bb19fef1ed829b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ee538a85cd84d2d7c855e29d358263" id="r_a19ee538a85cd84d2d7c855e29d358263"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19ee538a85cd84d2d7c855e29d358263">getDoor</a> ()=0</td></tr>
+<tr class="separator:a19ee538a85cd84d2d7c855e29d358263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00c4b08c8ad959f8670ed3b51efc9f9" id="r_ae00c4b08c8ad959f8670ed3b51efc9f9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae00c4b08c8ad959f8670ed3b51efc9f9">getLight</a> ()=0</td></tr>
+<tr class="separator:ae00c4b08c8ad959f8670ed3b51efc9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13b973a6cacfb269a9af693cfb202d7" id="r_ab13b973a6cacfb269a9af693cfb202d7"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab13b973a6cacfb269a9af693cfb202d7">getTemp</a> ()=0</td></tr>
+<tr class="separator:ab13b973a6cacfb269a9af693cfb202d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949633ea983db5528f75e1eb140d6e6a" id="r_a949633ea983db5528f75e1eb140d6e6a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a949633ea983db5528f75e1eb140d6e6a">setLight</a> ()</td></tr>
+<tr class="separator:a949633ea983db5528f75e1eb140d6e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fdb5b8432c2ca6c2f242829a7f2bd0" id="r_a34fdb5b8432c2ca6c2f242829a7f2bd0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34fdb5b8432c2ca6c2f242829a7f2bd0">toggleDoor</a> ()</td></tr>
+<tr class="separator:a34fdb5b8432c2ca6c2f242829a7f2bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305c31b30bf1e708ddae62a7a9de7e51" id="r_a305c31b30bf1e708ddae62a7a9de7e51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a305c31b30bf1e708ddae62a7a9de7e51">increaseTemp</a> (float newTemp)=0</td></tr>
+<tr class="separator:a305c31b30bf1e708ddae62a7a9de7e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb92e1eb6f9ccb0840169b73a89d38f" id="r_abdb92e1eb6f9ccb0840169b73a89d38f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb92e1eb6f9ccb0840169b73a89d38f">decreaseTemp</a> (float newTemp)=0</td></tr>
+<tr class="separator:abdb92e1eb6f9ccb0840169b73a89d38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abdb92e1eb6f9ccb0840169b73a89d38f" name="abdb92e1eb6f9ccb0840169b73a89d38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb92e1eb6f9ccb0840169b73a89d38f">&#9670;&#160;</a></span>decreaseTemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Integrator::decreaseTemp </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>newTemp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_old_thermo.html#a941d523fae052aa41515c46f167f06b6">OldThermo</a>, <a class="el" href="class_smart_thermo.html#a6e56c507e4522d5726f55650343de4a3">SmartThermo</a>, and <a class="el" href="class_thermo_type.html#ae794e25c23522eb8ab1e41fbb4dcaf96">ThermoType</a>.</p>
+
+</div>
+</div>
+<a id="a19ee538a85cd84d2d7c855e29d358263" name="a19ee538a85cd84d2d7c855e29d358263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ee538a85cd84d2d7c855e29d358263">&#9670;&#160;</a></span>getDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Integrator::getDoor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_door_integrator.html#a8791d0c628a491dc00bfb108f85bf2ac">DoorIntegrator</a>, and <a class="el" href="class_door_type.html#a73547a4c506efedefb89fb7be12d757d">DoorType</a>.</p>
+
+</div>
+</div>
+<a id="ae00c4b08c8ad959f8670ed3b51efc9f9" name="ae00c4b08c8ad959f8670ed3b51efc9f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00c4b08c8ad959f8670ed3b51efc9f9">&#9670;&#160;</a></span>getLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Integrator::getLight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_light_integrator.html#ae257f4405bb5c07143f53008c82fd725">LightIntegrator</a>.</p>
+
+</div>
+</div>
+<a id="ab13b973a6cacfb269a9af693cfb202d7" name="ab13b973a6cacfb269a9af693cfb202d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13b973a6cacfb269a9af693cfb202d7">&#9670;&#160;</a></span>getTemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Integrator::getTemp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_thermo_integrator.html#aedf697e29341438e4e68c5bc40ed6fc0">ThermoIntegrator</a>, and <a class="el" href="class_thermo_type.html#a42b7ddec9cb73ec9cd782eb45360e44c">ThermoType</a>.</p>
+
+</div>
+</div>
+<a id="a305c31b30bf1e708ddae62a7a9de7e51" name="a305c31b30bf1e708ddae62a7a9de7e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a305c31b30bf1e708ddae62a7a9de7e51">&#9670;&#160;</a></span>increaseTemp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Integrator::increaseTemp </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>newTemp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_old_thermo.html#a67d616306348aff5372f9f1655218cca">OldThermo</a>, <a class="el" href="class_smart_thermo.html#a64c4b812828a4e52855be953c820eb6b">SmartThermo</a>, and <a class="el" href="class_thermo_type.html#a10363d88b4ee7227eb3a7b045055105b">ThermoType</a>.</p>
+
+</div>
+</div>
+<a id="ac9723d2be9cff0d1c0bb19fef1ed829b" name="ac9723d2be9cff0d1c0bb19fef1ed829b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9723d2be9cff0d1c0bb19fef1ed829b">&#9670;&#160;</a></span>receiveMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Integrator::receiveMessage </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Receive a message from the macro event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a949633ea983db5528f75e1eb140d6e6a" name="a949633ea983db5528f75e1eb140d6e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949633ea983db5528f75e1eb140d6e6a">&#9670;&#160;</a></span>setLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Integrator::setLight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_light_integrator.html#a780e4488c3b0625aae47a9db1d20d03b">LightIntegrator</a>.</p>
+
+</div>
+</div>
+<a id="a34fdb5b8432c2ca6c2f242829a7f2bd0" name="a34fdb5b8432c2ca6c2f242829a7f2bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fdb5b8432c2ca6c2f242829a7f2bd0">&#9670;&#160;</a></span>toggleDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Integrator::toggleDoor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_door_type.html#aca367dd8f2334ef8697c57575380a1c0">DoorType</a>, <a class="el" href="class_old_door.html#a618001c106ccd80febed6cd42b3f2578">OldDoor</a>, and <a class="el" href="class_smart_door.html#a21d37cd898d76fcd5fc1273e92a8260f">SmartDoor</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_integrator_8h_source.html">Integrator.h</a></li>
-<li><b>Integrator.cpp</b></li>
+<li><a class="el" href="_integrator_8cpp.html">Integrator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
