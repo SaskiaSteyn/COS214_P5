@@ -94,7 +94,7 @@ void printMap(Mediator smartHomeSystem, TimeObserver time) {
     cout << "  |                           |\n";
     cout << "  |     Master Bedroom        | \n";
     cout << "  |     Lights: " << (masterBedroomLight ? "On" : "Off") << "           |\n";
-    cout << "  |     [" << (masterDoor ? "Open" : "Closed") << "]              | \n";
+    cout << "  |     [" << (masterDoor ? "Open" : "Closed") << "]                | \n";
     cout << "  +---------------------------| \n";
     cout << "                +-------------+\n";
     cout << "                | Hallway     |     \n";
@@ -102,7 +102,7 @@ void printMap(Mediator smartHomeSystem, TimeObserver time) {
     cout << "  +-------------+             +--------------+ \n";
     cout << "  | Bedroom     |             |  Bathroom    | \n";
     cout << "  | Lights: " << (bedroomLight ? "On" : "Off") << " |             |  Lights: " << (bathroomLight ? "On" : "Off") << " |   \n";
-    cout << "  | [" << (bedroomDoor ? "Open" : "Closed") << "]    |             |  [" << (bathroomDoor ? "Open" : "Closed") << "]    | \n";
+    cout << "  | [" << (bedroomDoor ? "Open" : "Closed") << "]      |             |  [" << (bathroomDoor ? "Open" : "Closed") << "]      | \n";
     cout << "  +-------------+             +--------------+ \n";
     cout << "                |             |           \n";
     cout << "                |             |\n";
@@ -114,7 +114,7 @@ void printMap(Mediator smartHomeSystem, TimeObserver time) {
     cout << "  |       Lights: " << (livingRoomLight ? "On " : "Off") << "         |     Lights: " << (kitchenLight ? "On " : "Off") << "    |\n";
     cout << "  |                           |                    |\n";
     cout << "  +-------------+ Front Door  +--------------------+\n";
-    cout << "                | [" << (frontDoor ? "Open" : "Closed") << "]    |\n";
+    cout << "                | [" << (frontDoor ? "Open" : "Closed") << "]      |\n";
     cout << "                +-------------+\n";
     cout << endl;
     cout << "              Lights: " << (outdoorLight ? "On" : "Off") << " \n";
