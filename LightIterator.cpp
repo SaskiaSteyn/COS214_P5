@@ -28,3 +28,6 @@ void LightIterator::addNode(LightNode* newNode) {
         current->next = newNode;
     }
 }
+
+LightNode* LightIterator::getCurrent() {return this->current;}
+LightNode* LightIterator::getHead() {return this->head;}

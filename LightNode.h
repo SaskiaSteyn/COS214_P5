@@ -2,16 +2,17 @@
 #define CODE_LIGHTNODE_H
 
 // #include "Mediator.h"
-#include "Integrator.h"
+// #include "Integrator.h"
+#include "LightIntegrator.h"
 
 // class Mediator;
-class Integrator;
+class LightIntegrator;
 
 class LightNode {
     public:
         LightNode();
-        LightNode(Integrator *node);
-        Integrator* light;
+        LightNode(LightIntegrator *node);
+        LightIntegrator* light;
         LightNode* next;
         LightNode* prev;
 

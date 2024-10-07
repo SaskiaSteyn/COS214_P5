@@ -22,16 +22,6 @@ class Mediator {
     friend class ThermoNode;
 
     protected:
-        // LightNode* outdoorLightHead;
-        // LightNode* livingAreaLightHead;
-        // LightNode* bedroomsLightHead;
-        //
-        // ThermoNode* livingAreaThermoHead;
-        // ThermoNode* bedroomsThermoHead;
-        //
-        // DoorNode* livingAreaDoorHead;
-        // DoorNode* bedroomsDoorHead;
-
         LightIterator* lightIteratorLivingArea;
         LightIterator* lightIteratorBedrooms;
         ThermoIterator* thermoIteratorBedrooms;
@@ -54,6 +44,13 @@ class Mediator {
 
         void addLivingAreaDoorNode(DoorNode* door);
         void addBedroomsDoorNode(DoorNode* door);
+
+        LightIterator* getLivingAreaLights();
+        LightIterator* getBedroomsLights();
+        ThermoIterator* getLivingAreaThermo();
+        ThermoIterator* getBedroomsThermo();
+        DoorIterator* getLivingAreaDoors();
+        DoorIterator* getBedroomsDoors();
 
 };
 

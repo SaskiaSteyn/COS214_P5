@@ -18,6 +18,8 @@ class DoorIterator {
         DoorNode* goToNext();
         void reset();
         void addNode(DoorNode* newNode);
+        DoorNode* getCurrent();
+        DoorNode* getHead();
 };
 
 

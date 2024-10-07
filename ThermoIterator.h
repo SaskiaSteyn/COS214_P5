@@ -20,6 +20,8 @@ public:
     ThermoNode* goToNext();
     void reset();
     void addNode(ThermoNode* newNode);
+    ThermoNode* getCurrent();
+    ThermoNode* getHead();
 };
 
 

@@ -6,7 +6,7 @@
 
 class LightType;
 
-class LightIntegrator : public Integrator{
+class LightIntegrator : public Integrator {
     protected:
         LightType *light;
     public:

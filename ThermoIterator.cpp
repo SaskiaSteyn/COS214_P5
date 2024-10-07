@@ -29,3 +29,6 @@ void ThermoIterator::addNode(ThermoNode* newNode) {
         current->next = newNode;
     }
 }
+
+ThermoNode* ThermoIterator::getCurrent() {return this->current;}
+ThermoNode* ThermoIterator::getHead() {return  this->head;}

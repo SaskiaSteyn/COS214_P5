@@ -59,3 +59,10 @@ void Mediator::addLivingAreaDoorNode(DoorNode* door) {
 void Mediator::addBedroomsDoorNode(DoorNode* door) {
     doorIteratorBedrooms->addNode(door);
 }
+
+LightIterator* Mediator::getLivingAreaLights() {return lightIteratorLivingArea;}
+LightIterator* Mediator::getBedroomsLights() {return lightIteratorBedrooms;}
+ThermoIterator* Mediator::getLivingAreaThermo() {return thermoIteratorLivingArea;}
+ThermoIterator* Mediator::getBedroomsThermo() {return  thermoIteratorBedrooms;}
+DoorIterator* Mediator::getLivingAreaDoors() {return doorIteratorLivingArea;}
+DoorIterator* Mediator::getBedroomsDoors() {return doorIteratorBedrooms;}

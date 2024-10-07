@@ -18,6 +18,8 @@ class LightIterator{
         LightNode* goToNext();
         void reset();
         void addNode(LightNode *newNode);
+        LightNode* getCurrent();
+        LightNode* getHead();
 };
 
 

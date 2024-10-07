@@ -28,3 +28,6 @@ void DoorIterator::addNode(DoorNode* newNode) {
         current->next = newNode;
     }
 }
+
+DoorNode* DoorIterator::getCurrent() {return this->current;}
+DoorNode* DoorIterator::getHead() {return this->head;}
