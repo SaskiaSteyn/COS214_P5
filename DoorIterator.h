@@ -13,9 +13,11 @@ class DoorIterator {
         DoorNode* head;
 
     public:
+        DoorIterator();
         DoorIterator(DoorNode *door);
         DoorNode* goToNext();
         void reset();
+        void addNode(DoorNode* newNode);
 };
 
 

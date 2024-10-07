@@ -15,9 +15,11 @@ protected:
     ThermoNode* head;
 
 public:
+    ThermoIterator();
     ThermoIterator(ThermoNode *thermo);
     ThermoNode* goToNext();
     void reset();
+    void addNode(ThermoNode* newNode);
 };
 
 
