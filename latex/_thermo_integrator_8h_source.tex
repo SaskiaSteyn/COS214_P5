@@ -1,0 +1,27 @@
+\doxysection{Thermo\+Integrator.\+h}
+\hypertarget{_thermo_integrator_8h_source}{}\label{_thermo_integrator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CODE\_THERMOINTEGRATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODE\_THERMOINTEGRATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Integrator.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ThermoType.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thermo_integrator}{ThermoIntegrator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_integrator}{Integrator}}\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_type}{ThermoType}}\ *thermostat;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator}{ThermoIntegrator}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator}{\string~ThermoIntegrator}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addThermo(\mbox{\hyperlink{class_thermo_type}{ThermoType}}*\ newThermo);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setThermo(\textcolor{keywordtype}{float}\ oldTemp,\ \textcolor{keywordtype}{float}\ newTemp);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getThermo();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_THERMOINTEGRATOR\_H}}
+
+\end{DoxyCode}

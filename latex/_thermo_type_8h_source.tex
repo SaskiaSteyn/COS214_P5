@@ -1,0 +1,22 @@
+\doxysection{Thermo\+Type.\+h}
+\hypertarget{_thermo_type_8h_source}{}\label{_thermo_type_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CODE\_THERMOTYPE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODE\_THERMOTYPE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Integrator.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thermo_type}{ThermoType}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_integrator}{Integrator}}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ temp;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_type}{ThermoType}}(\textcolor{keywordtype}{float}\ initialTemp);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ increaseTemp(\textcolor{keywordtype}{float}\ newTemp);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ decreaseTemp(\textcolor{keywordtype}{float}\ newTemp);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getTemp();}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_THERMOTYPE\_H}}
+
+\end{DoxyCode}
