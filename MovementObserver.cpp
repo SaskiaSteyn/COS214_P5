@@ -23,3 +23,7 @@ void MovementObserver::toggleMovement() {
     seesMovement = !seesMovement;
     sendMessage();
 }
+
+void MovementObserver::sendCustomMessage(string message) {
+    this->mediator->handleReceivedMessage(message);
+}

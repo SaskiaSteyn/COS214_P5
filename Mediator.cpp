@@ -96,17 +96,76 @@ void Mediator::handleReceivedMessage(string message) {
     cout << "Notifying all smart and legacy devices to change state" << endl;
 
     // Time Messages
-    if (message == "Time changed to afternoon") {
-        this->notifyThermo(18.0);
+    if (message == "Time changed to morning") {
+        this->notifyLights(false);
+        this->notifyThermo(19.0);
+        this->notifyDoor(false);
+    }
+    else if (message == "Time changed to afternoon") {
+        this->notifyThermo(20.0);
+    }
+    else if (message == "Time changed to evening") {
+        this->notifyLights(true);
+        this->notifyThermo(22.5);
+        this->notifyDoor(true);
+    }
+    else if (message == "Time changed to night") {
+        this->notifyThermo(24.0);
     }
 
 
-
     // Movement Messages
-    if (message == "Turn on lights. Unlock doors. Set temperature to 18") {
+    else if (message == "Turn on lights. Unlock doors. Set temperature to 18") {
         notifyLights(true);
         notifyDoor(false);
         notifyThermo(18.0);
+    }
+
+    // Custom Movement Messages
+    else if (message == "Walked into the living room") {
+        notifyLights(false);
+        lightIteratorLivingArea->reset();
+        lightIteratorLivingArea->goToNext();
+        lightIteratorLivingArea->goToNext();
+        if (!lightIteratorLivingArea->current->light->getLight()) {
+            lightIteratorLivingArea->current->light->setLight();
+        }
+        lightIteratorLivingArea->reset();
+    }
+    else if (message == "Walked into the kitchen") {
+        notifyLights(false);
+        lightIteratorLivingArea->reset();
+        lightIteratorLivingArea->goToNext();
+        lightIteratorLivingArea->goToNext();
+        if (!lightIteratorLivingArea->current->light->getLight()) {
+            lightIteratorLivingArea->current->light->setLight();
+        }
+        lightIteratorLivingArea->reset();
+    }
+    if (message == "Walked into the bedroom") {
+        notifyLights(false);
+        lightIteratorBedrooms->reset();
+        if (!lightIteratorBedrooms->current->light->getLight()) {
+            lightIteratorBedrooms->current->light->setLight();
+        }
+    }
+    if (message == "Walked into the bathroom") {
+        notifyLights(false);
+        lightIteratorLivingArea->reset();
+        lightIteratorLivingArea->goToNext();
+        if (!lightIteratorLivingArea->current->light->getLight()) {
+            lightIteratorLivingArea->current->light->setLight();
+        }
+        lightIteratorLivingArea->reset();
+    }
+    if (message == "Walked into the master bedroom") {
+        notifyLights(false);
+        lightIteratorBedrooms->reset();
+        lightIteratorBedrooms->goToNext();
+        if (!lightIteratorBedrooms->current->light->getLight()) {
+            lightIteratorBedrooms->current->light->setLight();
+        }
+        lightIteratorBedrooms->reset();
     }
 }
 

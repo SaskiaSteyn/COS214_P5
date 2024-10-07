@@ -23,6 +23,21 @@
 
 using namespace std;
 
+int chooseOption() {
+    int option = -1;
+
+    while (option < 1 || option > 7) {
+        cout << "Choose: (1)Living Room | (2)Kitchen | (3)Bedroom | 4(Bathroom) | (5)Master Bedroom | (6)Advance Time | (7)Exit House" << endl << "Choose you option(number only): ";
+        cin >> option;
+
+        if (option < 1 || option > 7) {
+            cout << "Please give a valid input (A number between 1 and 7)" << endl;
+        }
+    }
+
+    return option;
+}
+
 void printMap(Mediator smartHomeSystem) {
     smartHomeSystem.thermoIteratorLivingArea->reset();
     smartHomeSystem.thermoIteratorBedrooms->reset();
@@ -36,6 +51,8 @@ void printMap(Mediator smartHomeSystem) {
 
     // Light statuses
     bool bedroomLight = smartHomeSystem.lightIteratorBedrooms->current->light->getLight();  // true = on, false = off
+    smartHomeSystem.lightIteratorBedrooms->goToNext();
+    bool masterBedroomLight = smartHomeSystem.lightIteratorBedrooms->current->light->getLight();
     bool hallwayLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
     smartHomeSystem.lightIteratorLivingArea->goToNext();
     bool bathroomLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
@@ -46,37 +63,52 @@ void printMap(Mediator smartHomeSystem) {
     smartHomeSystem.lightIteratorLivingArea->goToNext();
     bool outdoorLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
 
+    // Door statuses
+    bool masterDoor = smartHomeSystem.doorIteratorBedrooms->current->door->getDoor();
+    smartHomeSystem.doorIteratorBedrooms->goToNext();
+    bool bedroomDoor = smartHomeSystem.doorIteratorBedrooms->current->door->getDoor();
+    bool bathroomDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
+    smartHomeSystem.doorIteratorLivingArea->goToNext();
+    bool frontDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
+
     std::cout << "Advanced House Floor Plan:\n\n";
 
     // Bedroom Area with hallway, bedrooms, and bathroom
-    cout << "  +----------------------+        Thermostat     : " << bedroomTemp << "°F\n";
-    cout << "  |                      |        Bedrooms Lights: " << (bedroomLight ? "On" : "Off") << " \n";
-    cout << "  |     Master Bedroom   | \n";
-    cout << "  |                      | \n";
-    cout << "  |     [Door: Open]     | \n";
-    cout << "  +----------------------| \n";
-    cout << "            +------------+\n";
-    cout << "            |   Hallway  |   Lights: " << (hallwayLight ? "On" : "Off") << "  \n";
-    cout << "            +            | \n";
-    cout << "  +---------+            +------------+ \n";
-    cout << "  |         |            |  Bathroom  | \n";
-    cout << "  | Bedroom |            |  [Open]    |  Lights: " << (bathroomLight ? "On" : "Off") << " \n";
-    cout << "  | [Closed]|            |            | \n";
-    cout << "  +---------+            +------------+ \n";
-    cout << "            |            |           \n";
-    cout << "            |            |\n";
-    cout << "            |            |\n";
-    cout << "            |            |\n";
-    cout << "  +---------+------------+---+--------------------+      Thermostat: " << livingAreaTemp << "°F\n";
-    cout << "  |                          |                    |\n";
-    cout << "  |       Living Room        |      Kitchen       |\n";
-    cout << "  |     Lights: " << (livingRoomLight ? "On " : "Off") << "          |     Lights: " << (kitchenLight ? "On " : "Off") << "    |\n";
-    cout << "  |                          |                    |\n";
-    cout << "  +-----------+   Front Door +--------------------+\n";
-    cout << "              |   [Open]     |\n";
-    cout << "              +--------------+\n";
+    cout << "  +---------------------------+        Thermostat          : " << bedroomTemp << "°C\n";
+    cout << "  |                           |\n";
+    cout << "  |     Master Bedroom        | \n";
+    cout << "  |     Lights: " << (masterBedroomLight ? "On" : "Off") << "           |\n";
+    cout << "  |     [" << (masterDoor ? "Open" : "Closed") << "]              | \n";
+    cout << "  +---------------------------| \n";
+    cout << "                +-------------+\n";
+    cout << "                | Hallway     |     \n";
+    cout << "                + Lights: " << (hallwayLight ? "On" : "Off") << " | \n";
+    cout << "  +-------------+             +--------------+ \n";
+    cout << "  | Bedroom     |             |  Bathroom    | \n";
+    cout << "  | Lights: " << (bedroomLight ? "On" : "Off") << " |             |  Lights: " << (bathroomLight ? "On" : "Off") << " |   \n";
+    cout << "  | [" << (bedroomDoor ? "Open" : "Closed") << "]    |             |  [" << (bathroomDoor ? "Open" : "Closed") << "]    | \n";
+    cout << "  +-------------+             +--------------+ \n";
+    cout << "                |             |           \n";
+    cout << "                |             |\n";
+    cout << "                |             |\n";
+    cout << "                |             |\n";
+    cout << "  +-------------+-------------+--------------------+      Thermostat: " << livingAreaTemp << "°C\n";
+    cout << "  |                           |                    |\n";
+    cout << "  |       Living Room         |      Kitchen       |\n";
+    cout << "  |       Lights: " << (livingRoomLight ? "On " : "Off") << "         |     Lights: " << (kitchenLight ? "On " : "Off") << "    |\n";
+    cout << "  |                           |                    |\n";
+    cout << "  +-------------+ Front Door  +--------------------+\n";
+    cout << "                | [" << (frontDoor ? "Open" : "Closed") << "]    |\n";
+    cout << "                +-------------+\n";
     cout << endl;
     cout << "              Lights: " << (outdoorLight ? "On" : "Off") << " \n";
+
+    smartHomeSystem.thermoIteratorLivingArea->reset();
+    smartHomeSystem.thermoIteratorBedrooms->reset();
+    smartHomeSystem.lightIteratorLivingArea->reset();
+    smartHomeSystem.lightIteratorBedrooms->reset();
+    smartHomeSystem.doorIteratorLivingArea->reset();
+    smartHomeSystem.doorIteratorBedrooms->reset();
 }
 
 int main() {
@@ -142,7 +174,7 @@ int main() {
     smartHomeSystem.addBedroomsDoorNode(new DoorNode(legacyDoor1));
     smartHomeSystem.addBedroomsDoorNode(new DoorNode(legacyDoor2));
     // Bathroom Door
-    smartHomeSystem.addBedroomsDoorNode(new DoorNode(smartDoor1));
+    smartHomeSystem.addLivingAreaDoorNode(new DoorNode(smartDoor1));
 
     // Front Door
     smartHomeSystem.addLivingAreaDoorNode(new DoorNode(smartDoor2));
@@ -157,7 +189,7 @@ int main() {
     auto *time = new TimeObserver(&smartHomeSystem);
     auto *movement = new MovementObserver(&smartHomeSystem);
 
-    // smartHomeSystem.lightIteratorLivingArea->current->light->setLight();
+    printMap(smartHomeSystem);
 
     string firstInput;
 
@@ -171,46 +203,126 @@ int main() {
 
     int option = -1;
 
-    while (option < 1 || option > 6) {
-        cout << "Choose: (1)Living Room | (2)Kitchen | (3)Bedroom | 4(Bathroom) | (5)Master Bedroom | (6)Advance Time | (7)Exit House" << endl << "Choose you option(number only): ";
-        cin >> option;
+    while (option != 7) {
 
-        if (option < 1 || option > 7) {
-            cout << "Please give a valid input (A number between 1 and 7)" << endl;
-        }
-    }
+        option = chooseOption();
 
-    switch (option) {
-        case 1: {
-            if (!movement->getMovement()) {
+        if (option == 1) {
+            if (!movement->getMovement() && time->getTime() == 3) {
                 movement->toggleMovement();
+            }
+            else if (time->getTime() == 2) {
+                movement->sendCustomMessage("Walked into the living room");
             }
 
             cout << "Moved to Living Room" << endl;
         }
+        else if (option == 2) {
+            if (!movement->getMovement() && time->getTime() == 3) {
+                    movement->toggleMovement();
+            }
+            else if (time->getTime() == 2) {
+                movement->sendCustomMessage("Walked into the kitchen");
+            }
 
-        case 2: {
-
+            cout << "Moved to Kitchen" << endl;
         }
+        else if (option == 3) {
+            if (!movement->getMovement() && time->getTime() == 3) {
+                movement->toggleMovement();
+            }
+            else if (time->getTime() == 2) {
+                movement->sendCustomMessage("Walked into the bedroom");
+            }
 
-        case 3: {
-
+            cout << "Moved to Bedroom" << endl;
         }
+        else if (option == 4) {
+            if (!movement->getMovement() && time->getTime() == 3) {
+                movement->toggleMovement();
+            }
+            else if (time->getTime() == 2) {
+                movement->sendCustomMessage("Walked into the bathroom");
+            }
 
-        case 4: {
-
+            cout << "Moved to Bathroom" << endl;
         }
+        else if (option == 5) {
+            if (!movement->getMovement() && time->getTime() == 3) {
+                movement->toggleMovement();
+            }
+            else if (time->getTime() == 2) {
+                movement->sendCustomMessage("Walked into the master bedroom");
+            }
 
-        case 5: {
-
+            cout << "Moved to Master Bedroom" << endl;
         }
-
-        case 6: {
+        else if (option == 6) {
             time->advanceTime();
         }
+        else if (option == 7) {
+            cout << "Thank you for playing our demo. See you next time!" << endl;
+            return 0;
+        }
+
+        // switch (option) {
+        //     case 1: {
+        //         if (!movement->getMovement()) {
+        //             movement->toggleMovement();
+        //         }
+        //
+        //         cout << "Moved to Living Room" << endl;
+        //     }
+        //
+        //     case 2: {
+        //         if (!movement->getMovement()) {
+        //             movement->toggleMovement();
+        //         }
+        //
+        //         cout << "Moved to Kitchen" << endl;
+        //     }
+        //
+        //     case 3: {
+        //         if (!movement->getMovement()) {
+        //             movement->toggleMovement();
+        //         }
+        //
+        //         cout << "Moved to Bedroom" << endl;
+        //     }
+        //
+        //     case 4: {
+        //         if (!movement->getMovement()) {
+        //             movement->toggleMovement();
+        //         }
+        //
+        //         cout << "Moved to Bathroom" << endl;
+        //     }
+        //
+        //     case 5: {
+        //         if (!movement->getMovement()) {
+        //             movement->toggleMovement();
+        //         }
+        //
+        //         cout << "Moved to Master Bedroom" << endl;
+        //     }
+        //
+        //     case 6: {
+        //         time->advanceTime();
+        //     }
+        //
+        //     case 7: {
+        //         cout << "Thank you for playing our demo. See you next time!" << endl;
+        //         return 0;
+        //     }
+        //
+        //     default: {
+        //
+        //     }
+
+        printMap(smartHomeSystem);
     }
 
-    printMap(smartHomeSystem);
+
 
     return 0;
 }

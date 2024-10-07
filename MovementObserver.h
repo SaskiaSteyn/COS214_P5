@@ -14,6 +14,7 @@ class MovementObserver {
         bool getMovement();
         void toggleMovement();
         void sendMessage();
+        void sendCustomMessage(string message);
 };
 
 
