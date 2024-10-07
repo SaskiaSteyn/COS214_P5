@@ -1,0 +1,29 @@
+\doxysection{Thermo\+Iterator.\+h}
+\hypertarget{_thermo_iterator_8h_source}{}\label{_thermo_iterator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CODE\_THERMOITERATOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODE\_THERMOITERATOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ "{}Integrator.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ThermoNode.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mediator}{Mediator}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thermo_iterator}{ThermoIterator}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mediator}{Mediator}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_thermo_node}{ThermoNode}}*\ current;}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_thermo_node}{ThermoNode}}*\ head;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_thermo_iterator}{ThermoIterator}}(\mbox{\hyperlink{class_thermo_node}{ThermoNode}}\ *thermo);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_thermo_node}{ThermoNode}}*\ goToNext();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ reset();}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_THERMOITERATOR\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,22 @@
+\doxysection{Movement\+Observer.\+h}
+\hypertarget{_movement_observer_8h_source}{}\label{_movement_observer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CODE\_MOVEMENTOBSERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CODE\_MOVEMENTOBSERVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MacroEvent.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_observer}{MovementObserver}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_macro_event}{MacroEvent}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ seesMovement;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_movement_observer}{MovementObserver}}():\ seesMovement(\textcolor{keyword}{false})\ \{\};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ getMovement();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleMovement();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ sendMessage();}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_MOVEMENTOBSERVER\_H}}
+
+\end{DoxyCode}

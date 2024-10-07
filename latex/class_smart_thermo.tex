@@ -1,0 +1,65 @@
+\doxysection{Smart\+Thermo Class Reference}
+\hypertarget{class_smart_thermo}{}\label{class_smart_thermo}\index{SmartThermo@{SmartThermo}}
+Inheritance diagram for Smart\+Thermo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_smart_thermo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_smart_thermo_a43b75cb60d1552f0190508fb7099724b}\label{class_smart_thermo_a43b75cb60d1552f0190508fb7099724b} 
+{\bfseries Smart\+Thermo} (float initial\+Temp)
+\item 
+void \mbox{\hyperlink{class_smart_thermo_a64c4b812828a4e52855be953c820eb6b}{increase\+Temp}} (float new\+Temp) override
+\item 
+void \mbox{\hyperlink{class_smart_thermo_a6e56c507e4522d5726f55650343de4a3}{decrease\+Temp}} (float new\+Temp) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Thermo\+Type} (float initial\+Temp)
+\item 
+float {\bfseries get\+Temp} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries receive\+Message} (string message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries temp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_smart_thermo_a6e56c507e4522d5726f55650343de4a3}\index{SmartThermo@{SmartThermo}!decreaseTemp@{decreaseTemp}}
+\index{decreaseTemp@{decreaseTemp}!SmartThermo@{SmartThermo}}
+\doxysubsubsection{\texorpdfstring{decreaseTemp()}{decreaseTemp()}}
+{\footnotesize\ttfamily \label{class_smart_thermo_a6e56c507e4522d5726f55650343de4a3} 
+void Smart\+Thermo\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}.
+
+\Hypertarget{class_smart_thermo_a64c4b812828a4e52855be953c820eb6b}\index{SmartThermo@{SmartThermo}!increaseTemp@{increaseTemp}}
+\index{increaseTemp@{increaseTemp}!SmartThermo@{SmartThermo}}
+\doxysubsubsection{\texorpdfstring{increaseTemp()}{increaseTemp()}}
+{\footnotesize\ttfamily \label{class_smart_thermo_a64c4b812828a4e52855be953c820eb6b} 
+void Smart\+Thermo\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Thermo.\+h\item 
+Smart\+Thermo.\+cpp\end{DoxyCompactItemize}
