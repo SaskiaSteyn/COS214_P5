@@ -1,6 +1,8 @@
 #ifndef CODE_MEDIATOR_H
 #define CODE_MEDIATOR_H
 
+#include <cmath>
+
 #include "LightNode.h"
 #include "ThermoNode.h"
 #include "DoorNode.h"
@@ -48,9 +50,9 @@ class Mediator {
         DoorIterator* doorIteratorBedrooms;
 
         Mediator();
-        void notifyLights();
-        void notifyThermo();
-        void notifyDoor();
+        void notifyLights(bool state);
+        void notifyThermo(float temp);
+        void notifyDoor(bool state);
         void handleReceivedMessage(string message);
 
         void addLivingAreaLightNode(LightNode* light);

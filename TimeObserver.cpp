@@ -1,5 +1,16 @@
 #include "TimeObserver.h"
 
+TimeObserver::TimeObserver() {
+    time = 0;
+    this->mediator = nullptr;
+}
+
+TimeObserver::TimeObserver(Mediator* newMediator) {
+    time = 0;
+    this->mediator = newMediator;
+    sendMessage();
+}
+
 int TimeObserver::getTime() {
     return this->time;
 }
@@ -13,17 +24,17 @@ void TimeObserver::advanceTime() {
     sendMessage();
 }
 
-string TimeObserver::sendMessage() {
+void TimeObserver::sendMessage() {
     if (time == 0) {
-        return "Time changed to morning";
+        this->mediator->handleReceivedMessage("Time changed to morning");
     }
     else if (time == 1) {
-        return "Time changed to afternoon";
+        this->mediator->handleReceivedMessage("Time changed to afternoon");
     }
     else if (time == 2) {
-        return "Time changed to evening";
+        this->mediator->handleReceivedMessage("Time changed to evening");
     }
     else {
-        return "Time changed to night";
+        this->mediator->handleReceivedMessage("Time changed to night");
     }
 }
