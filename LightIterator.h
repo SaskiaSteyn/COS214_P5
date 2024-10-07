@@ -4,13 +4,12 @@
 //#include "Integrator.h"
 #include "LightNode.h"
 
-class Mediator;
+class LightNode;
 
 class LightIterator{
-    friend class Mediator;
+    friend class LightNode;
     protected:
-        LightNode* current;
-        LightNode* head;
+
 
     public:
         LightIterator();
@@ -18,6 +17,8 @@ class LightIterator{
         LightNode* goToNext();
         void reset();
         void addNode(LightNode *newNode);
+        LightNode* current;
+        LightNode* head;
 };
 
 

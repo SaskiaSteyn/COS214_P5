@@ -11,6 +11,12 @@ class ThermoType : public Integrator{
         virtual void increaseTemp(float newTemp);
         virtual void decreaseTemp(float newTemp);
         float getTemp();
+
+        bool getDoor() {return false;};
+        bool getLight() {return false;};
+
+        virtual void setLight() {};
+        virtual void toggleDoor() {};
 };
 
 

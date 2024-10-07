@@ -4,15 +4,16 @@
 //#include "Integrator.h"
 #include "DoorNode.h"
 
-class Mediator;
+class DoorNode;
 
 class DoorIterator {
-    friend class Mediator;
+    friend class DoorNode;
     protected:
-        DoorNode* current;
-        DoorNode* head;
+
 
     public:
+        DoorNode* current;
+        DoorNode* head;
         DoorIterator();
         DoorIterator(DoorNode *door);
         DoorNode* goToNext();

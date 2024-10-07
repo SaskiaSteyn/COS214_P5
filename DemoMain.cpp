@@ -39,6 +39,9 @@ int main() {
     auto *smartLight5 = new LightIntegrator();
     smartLight5->addLight(new SmartLight());
 
+    auto *smartLight6 = new LightIntegrator();
+    smartLight6->addLight(new SmartLight());
+
     auto *legacyLight1 = new LightIntegrator();
     legacyLight1->addLight(new OldLight());
 
@@ -74,6 +77,7 @@ int main() {
     smartHomeSystem.addLivingAreaLightNode(new LightNode(smartLight3));
     smartHomeSystem.addLivingAreaLightNode(new LightNode(smartLight4));
     smartHomeSystem.addLivingAreaLightNode(new LightNode(smartLight5));
+    smartHomeSystem.addLivingAreaLightNode(new LightNode(smartLight6));
 
     // Bedroom Doors
     smartHomeSystem.addBedroomsDoorNode(new DoorNode(legacyDoor1));
@@ -92,16 +96,27 @@ int main() {
 
      // Thermostat statistics
     // TODO: access the getTemp on the thermotype on the current node
-    float bedroomTemp = smartHomeSystem.thermoIteratorBedrooms->current->thermo; // Fahrenheit
-    int livingAreaTemp = 70; // Fahrenheit
+    smartHomeSystem.thermoIteratorLivingArea->reset();
+    smartHomeSystem.thermoIteratorBedrooms->reset();
+    smartHomeSystem.lightIteratorLivingArea->reset();
+    smartHomeSystem.lightIteratorBedrooms->reset();
+    smartHomeSystem.doorIteratorLivingArea->reset();
+    smartHomeSystem.doorIteratorBedrooms->reset();
+
+    float bedroomTemp = smartHomeSystem.thermoIteratorBedrooms->head->thermo->getTemp(); // Fahrenheit
+    float livingAreaTemp = smartHomeSystem.thermoIteratorLivingArea->head->thermo->getTemp(); // Fahrenheit
 
     // Light statuses
-    bool bedroomLight = true;  // true = on, false = off
-    bool hallwayLight = false;
-    bool bathroomLight = true;
-    bool livingRoomLight = false;
-    bool kitchenLight = true;
-    bool outdoorLight = true;
+    bool bedroomLight = smartHomeSystem.lightIteratorBedrooms->current->light->getLight();  // true = on, false = off
+    bool hallwayLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    bool bathroomLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    bool livingRoomLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    bool kitchenLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    bool outdoorLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
 
     std::cout << "Advanced House Floor Plan:\n\n";
 
@@ -134,6 +149,73 @@ int main() {
     cout << "              +--------------+\n";
     cout << endl;
     cout << "              Lights: " << (outdoorLight ? "On" : "Off") << " \n";
+
+
+    smartHomeSystem.lightIteratorLivingArea->current->light->setLight();
+
+    smartHomeSystem.thermoIteratorLivingArea->reset();
+    smartHomeSystem.thermoIteratorBedrooms->reset();
+    smartHomeSystem.lightIteratorLivingArea->reset();
+    smartHomeSystem.lightIteratorBedrooms->reset();
+    smartHomeSystem.doorIteratorLivingArea->reset();
+    smartHomeSystem.doorIteratorBedrooms->reset();
+
+    bedroomTemp = smartHomeSystem.thermoIteratorBedrooms->head->thermo->getTemp(); // Fahrenheit
+    livingAreaTemp = smartHomeSystem.thermoIteratorLivingArea->head->thermo->getTemp(); // Fahrenheit
+
+    // Light statuses
+    bedroomLight = smartHomeSystem.lightIteratorBedrooms->current->light->getLight();  // true = on, false = off
+    hallwayLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    bathroomLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    livingRoomLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    kitchenLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+    smartHomeSystem.lightIteratorLivingArea->goToNext();
+    outdoorLight = smartHomeSystem.lightIteratorLivingArea->current->light->getLight();
+
+    std::cout << "Advanced House Floor Plan:\n\n";
+
+    // Bedroom Area with hallway, bedrooms, and bathroom
+    cout << "  +----------------------+        Thermostat     : " << bedroomTemp << "°F\n";
+    cout << "  |                      |        Bedrooms Lights: " << (bedroomLight ? "On" : "Off") << " \n";
+    cout << "  |     Master Bedroom   | \n";
+    cout << "  |                      | \n";
+    cout << "  |     [Door: Open]     | \n";
+    cout << "  +----------------------| \n";
+    cout << "            +------------+\n";
+    cout << "            |   Hallway  |   Lights: " << (hallwayLight ? "On" : "Off") << "  \n";
+    cout << "            +            | \n";
+    cout << "  +---------+            +------------+ \n";
+    cout << "  |         |            |  Bathroom  | \n";
+    cout << "  | Bedroom |            |  [Open]    |  Lights: " << (bathroomLight ? "On" : "Off") << " \n";
+    cout << "  | [Closed]|            |            | \n";
+    cout << "  +---------+            +------------+ \n";
+    cout << "            |            |           \n";
+    cout << "            |            |\n";
+    cout << "            |            |\n";
+    cout << "            |            |\n";
+    cout << "  +---------+------------+---+--------------------+      Thermostat: " << livingAreaTemp << "°F\n";
+    cout << "  |                          |                    |\n";
+    cout << "  |       Living Room        |      Kitchen       |\n";
+    cout << "  |     Lights: " << (livingRoomLight ? "On " : "Off") << "          |     Lights: " << (kitchenLight ? "On " : "Off") << "    |\n";
+    cout << "  |                          |                    |\n";
+    cout << "  +-----------+   Front Door +--------------------+\n";
+    cout << "              |   [Open]     |\n";
+    cout << "              +--------------+\n";
+    cout << endl;
+    cout << "              Lights: " << (outdoorLight ? "On" : "Off") << " \n";
+
+    string firstInput;
+
+    cout << endl << endl << "The user is currently outside" << endl;
+    cout << "Go Inside? (y/n): ";
+    cin >> firstInput;
+
+    if (firstInput == "n" || firstInput == "N" || firstInput == "No") {
+        cout << "Thank you for playing our demo. See you next time!" << endl;
+    }
 
     return 0;
 }

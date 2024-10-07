@@ -21,6 +21,6 @@ void ThermoIntegrator::setThermo(float oldTemp, float newTemp) {
     }
 }
 
-float ThermoIntegrator::getThermo() {
+float ThermoIntegrator::getTemp() {
     return thermostat->getTemp();
 }

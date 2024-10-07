@@ -14,6 +14,12 @@ public:
     void addDoor(DoorType* newDoor);
     void setDoor();
     bool getDoor();
+    virtual bool getLight() {return false;};
+    virtual float getTemp() {return 0.0;};
+    virtual void setLight() {};
+    virtual void toggleDoor() {};
+    virtual void increaseTemp(float newTemp) {};
+    virtual void decreaseTemp(float newTemp) {};
 };
 
 

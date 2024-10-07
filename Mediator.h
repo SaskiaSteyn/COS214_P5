@@ -13,6 +13,10 @@ class DoorNode;
 class ThermoNode;
 class LightNode;
 
+class LightIterator;
+class ThermoIterator;
+class DoorIterator;
+
 #include <iostream>
 using namespace std;
 
@@ -20,6 +24,9 @@ class Mediator {
     friend class LightNode;
     friend class DoorNode;
     friend class ThermoNode;
+    friend class LightIterator;
+    friend class ThermoIterator;
+    friend class DoorIterator;
 
     protected:
         // LightNode* outdoorLightHead;

@@ -11,6 +11,12 @@ class DoorType : public Integrator{
         virtual void toggleDoor();
         bool getDoor();
 
+        float getTemp() {return 0.0;};
+        bool getLight() {return false;};
+
+        virtual void setLight() {}
+        virtual void increaseTemp(float newTemp) {};
+        virtual void decreaseTemp(float newTemp) {};
 };
 
 
