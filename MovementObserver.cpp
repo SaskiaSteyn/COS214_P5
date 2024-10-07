@@ -1,11 +1,17 @@
 #include "MovementObserver.h"
 
-string MovementObserver::sendMessage() {
+MovementObserver::MovementObserver() {}
+
+MovementObserver::MovementObserver(Mediator* newMediator) {
+    this->mediator = newMediator;
+}
+
+void MovementObserver::sendMessage() {
     if (seesMovement) {
-        return "Turn on lights. Unlock doors. Set temperature to 18";
+        this->mediator->handleReceivedMessage("Turn on lights. Unlock doors. Set temperature to 18");
     }
     else {
-        return "Turn off lights. Lock doors. Set temperature to 25";
+        this->mediator->handleReceivedMessage("Turn off lights. Lock doors. Set temperature to 25");
     }
 }
 

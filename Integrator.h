@@ -17,8 +17,8 @@ class Integrator {
 
         virtual void setLight() {};
         virtual void toggleDoor() {};
-        virtual void increaseTemp(float newTemp) {};
-        virtual void decreaseTemp(float newTemp) {};
+        virtual void increaseTemp(float newTemp) = 0;
+        virtual void decreaseTemp(float newTemp) = 0;
 };
 
 

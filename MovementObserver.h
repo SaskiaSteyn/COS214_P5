@@ -2,15 +2,18 @@
 #define CODE_MOVEMENTOBSERVER_H
 
 #include "MacroEvent.h"
+#include "Mediator.h"
 
-class MovementObserver: public MacroEvent {
+class MovementObserver {
     protected:
         bool seesMovement;
+        Mediator *mediator;
     public:
-        MovementObserver(): seesMovement(false) {};
+        MovementObserver();
+        MovementObserver(Mediator *newMediator);
         bool getMovement();
         void toggleMovement();
-        string sendMessage();
+        void sendMessage();
 };
 
 

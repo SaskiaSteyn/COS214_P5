@@ -6,6 +6,7 @@ using namespace std;
 
 class MacroEvent {
     public:
+        MacroEvent() {}
         virtual string sendMessage() = 0;
 };
 
