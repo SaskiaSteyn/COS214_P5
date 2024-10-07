@@ -17,6 +17,7 @@ class LightIntegrator : public Integrator{
         bool getLight();
         virtual bool getDoor() {return false;};
         virtual float getTemp()  {return 0.0;};
+        virtual void setDoor() {};
         virtual void toggleDoor() {};
         virtual void increaseTemp(float newTemp) {};
         virtual void decreaseTemp(float newTemp) {};

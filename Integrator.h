@@ -15,8 +15,9 @@ class Integrator {
         virtual bool getLight() = 0;
         virtual float getTemp() = 0;
 
+        virtual void setDoor() {};
         virtual void setLight() {};
-        virtual void toggleDoor() {};
+        virtual void toggleDoor() = 0;
         virtual void increaseTemp(float newTemp) = 0;
         virtual void decreaseTemp(float newTemp) = 0;
 };

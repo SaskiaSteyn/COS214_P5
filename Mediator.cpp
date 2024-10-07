@@ -63,12 +63,7 @@ void Mediator::notifyDoor(bool state) {
 
     doorIteratorBedrooms->reset();
     while (doorIteratorBedrooms->current != nullptr) {
-        if (state && !doorIteratorBedrooms->current->door->getDoor()) {
-            doorIteratorBedrooms->current->door->toggleDoor();
-        }
-        else if (!state && doorIteratorBedrooms->current->door->getLight()) {
-            doorIteratorBedrooms->current->door->toggleDoor();
-        }
+        doorIteratorBedrooms->current->door->setDoor();
 
         doorIteratorBedrooms->goToNext();
     }
@@ -76,12 +71,7 @@ void Mediator::notifyDoor(bool state) {
 
     doorIteratorLivingArea->reset();
     while (doorIteratorLivingArea->current != nullptr) {
-        if (state && !doorIteratorLivingArea->current->door->getDoor()) {
-            doorIteratorLivingArea->current->door->toggleDoor();
-        }
-        else if (!state && doorIteratorLivingArea->current->door->getLight()) {
-            doorIteratorLivingArea->current->door->toggleDoor();
-        }
+        doorIteratorLivingArea->current->door->setDoor();
 
         doorIteratorLivingArea->goToNext();
     }
@@ -99,7 +89,7 @@ void Mediator::handleReceivedMessage(string message) {
     if (message == "Time changed to morning") {
         this->notifyLights(false);
         this->notifyThermo(19.0);
-        this->notifyDoor(false);
+        this->notifyDoor(true);
     }
     else if (message == "Time changed to afternoon") {
         this->notifyThermo(20.0);
@@ -107,7 +97,7 @@ void Mediator::handleReceivedMessage(string message) {
     else if (message == "Time changed to evening") {
         this->notifyLights(true);
         this->notifyThermo(22.5);
-        this->notifyDoor(true);
+        this->notifyDoor(false);
     }
     else if (message == "Time changed to night") {
         this->notifyThermo(24.0);
