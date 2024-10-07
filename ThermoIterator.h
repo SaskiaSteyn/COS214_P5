@@ -11,10 +11,11 @@ class ThermoIterator{
 
 
 protected:
-    ThermoNode* current;
-    ThermoNode* head;
+
 
 public:
+    ThermoNode* current;
+    ThermoNode* head;
     ThermoIterator();
     ThermoIterator(ThermoNode *thermo);
     ThermoNode* goToNext();

@@ -91,7 +91,8 @@ int main() {
     smartHomeSystem.addLivingAreaThermoNode(new ThermoNode(smartThermo));
 
      // Thermostat statistics
-    int bedroomTemp = 72; // Fahrenheit
+    // TODO: access the getTemp on the thermotype on the current node
+    float bedroomTemp = smartHomeSystem.thermoIteratorBedrooms->current->thermo; // Fahrenheit
     int livingAreaTemp = 70; // Fahrenheit
 
     // Light statuses

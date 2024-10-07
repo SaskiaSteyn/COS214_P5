@@ -32,6 +32,7 @@ class Mediator {
         // DoorNode* livingAreaDoorHead;
         // DoorNode* bedroomsDoorHead;
 
+    public:
         LightIterator* lightIteratorLivingArea;
         LightIterator* lightIteratorBedrooms;
         ThermoIterator* thermoIteratorBedrooms;
@@ -39,7 +40,6 @@ class Mediator {
         DoorIterator* doorIteratorLivingArea;
         DoorIterator* doorIteratorBedrooms;
 
-    public:
         Mediator();
         void notifyLights();
         void notifyThermo();
