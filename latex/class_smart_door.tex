@@ -10,17 +10,29 @@ Inheritance diagram for Smart\+Door\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_smart_door_a21d37cd898d76fcd5fc1273e92a8260f}{toggle\+Door}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Toggle the door state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_door_type}{Door\+Type}}}
 \begin{DoxyCompactItemize}
 \item 
-bool {\bfseries get\+Door} ()
+{\bfseries Door\+Type} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Door Type\+:\+: Door Type object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_door_type_a73547a4c506efedefb89fb7be12d757d}{get\+Door}} ()
+\begin{DoxyCompactList}\small\item\em returns the door state \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_door_type_a3d0a1d7d059785f4786e76264ba7ed53}{get\+Temp}} ()
+\item 
+bool \mbox{\hyperlink{class_door_type_aec16ab9ae0748dadab8e50c99f7622b9}{get\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_door_type_a93ffe30f458332fe3245a7dc8d8b51f3}{set\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_door_type_a03c6fab8ff600104fee1c420e3ff2e4f}{increase\+Temp}} (float new\+Temp)
+\item 
+virtual void \mbox{\hyperlink{class_door_type_a1d7a6bf0fbb817630aa6007ce75691f6}{decrease\+Temp}} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries receive\+Message} (string message)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_door_type}{Door\+Type}}}
 \begin{DoxyCompactItemize}
@@ -38,11 +50,15 @@ void Smart\+Door\+::toggle\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 
 
-Reimplemented from \mbox{\hyperlink{class_door_type}{Door\+Type}}.
+Toggle the door state. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_door_type_aca367dd8f2334ef8697c57575380a1c0}{Door\+Type}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Smart\+Door.\+h\item 
-Smart\+Door.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_smart_door_8cpp}{Smart\+Door.\+cpp}}\end{DoxyCompactItemize}

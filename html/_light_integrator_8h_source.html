@@ -100,18 +100,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="class_light_type.html">LightType</a> *light;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_class" href="class_light_integrator.html">LightIntegrator</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="class_light_integrator.html">~LightIntegrator</a>();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">void</span> addLight(<a class="code hl_class" href="class_light_type.html">LightType</a>* newLight);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> setLight();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">bool</span> getLight();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_function" href="class_light_integrator.html#a6029293ed1a60e0acecbc239d5fc0c7c">LightIntegrator</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="class_light_integrator.html#a62cb696a6689c22d55012b539fb40fd9">~LightIntegrator</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_light_integrator.html#a7b5be8a3cc180bfc57c2609a3906200e">addLight</a>(<a class="code hl_class" href="class_light_type.html">LightType</a>* newLight);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_light_integrator.html#a780e4488c3b0625aae47a9db1d20d03b">setLight</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_light_integrator.html#ae257f4405bb5c07143f53008c82fd725">getLight</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> getDoor() {<span class="keywordflow">return</span> <span class="keyword">false</span>;};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">virtual</span> <span class="keywordtype">float</span> getTemp()  {<span class="keywordflow">return</span> 0.0;};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> toggleDoor() {};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> increaseTemp(<span class="keywordtype">float</span> newTemp) {};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> decreaseTemp(<span class="keywordtype">float</span> newTemp) {};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">//CODE_LIGHTINTEGRATOR_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">//CODE_LIGHTINTEGRATOR_H</span></div>
 <div class="ttc" id="aclass_integrator_html"><div class="ttname"><a href="class_integrator.html">Integrator</a></div><div class="ttdef"><b>Definition</b> Integrator.h:9</div></div>
 <div class="ttc" id="aclass_light_integrator_html"><div class="ttname"><a href="class_light_integrator.html">LightIntegrator</a></div><div class="ttdef"><b>Definition</b> LightIntegrator.h:9</div></div>
+<div class="ttc" id="aclass_light_integrator_html_a6029293ed1a60e0acecbc239d5fc0c7c"><div class="ttname"><a href="class_light_integrator.html#a6029293ed1a60e0acecbc239d5fc0c7c">LightIntegrator::LightIntegrator</a></div><div class="ttdeci">LightIntegrator()</div><div class="ttdoc">Construct a new Light Integrator:: Light Integrator object.</div><div class="ttdef"><b>Definition</b> LightIntegrator.cpp:17</div></div>
+<div class="ttc" id="aclass_light_integrator_html_a62cb696a6689c22d55012b539fb40fd9"><div class="ttname"><a href="class_light_integrator.html#a62cb696a6689c22d55012b539fb40fd9">LightIntegrator::~LightIntegrator</a></div><div class="ttdeci">~LightIntegrator()</div><div class="ttdoc">Destroy the Light Integrator:: Light Integrator object.</div><div class="ttdef"><b>Definition</b> LightIntegrator.cpp:25</div></div>
+<div class="ttc" id="aclass_light_integrator_html_a780e4488c3b0625aae47a9db1d20d03b"><div class="ttname"><a href="class_light_integrator.html#a780e4488c3b0625aae47a9db1d20d03b">LightIntegrator::setLight</a></div><div class="ttdeci">void setLight()</div><div class="ttdoc">sets the light state</div><div class="ttdef"><b>Definition</b> LightIntegrator.cpp:42</div></div>
+<div class="ttc" id="aclass_light_integrator_html_a7b5be8a3cc180bfc57c2609a3906200e"><div class="ttname"><a href="class_light_integrator.html#a7b5be8a3cc180bfc57c2609a3906200e">LightIntegrator::addLight</a></div><div class="ttdeci">void addLight(LightType *newLight)</div><div class="ttdoc">Add a new light object.</div><div class="ttdef"><b>Definition</b> LightIntegrator.cpp:34</div></div>
+<div class="ttc" id="aclass_light_integrator_html_ae257f4405bb5c07143f53008c82fd725"><div class="ttname"><a href="class_light_integrator.html#ae257f4405bb5c07143f53008c82fd725">LightIntegrator::getLight</a></div><div class="ttdeci">bool getLight()</div><div class="ttdoc">returns the light state</div><div class="ttdef"><b>Definition</b> LightIntegrator.cpp:52</div></div>
 <div class="ttc" id="aclass_light_type_html"><div class="ttname"><a href="class_light_type.html">LightType</a></div><div class="ttdef"><b>Definition</b> LightType.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -3,24 +3,65 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_time_observer_ad6139ee0fddec2781c2618786eefb576}\label{class_time_observer_ad6139ee0fddec2781c2618786eefb576} 
-int {\bfseries get\+Time} ()
-\item 
+\Hypertarget{class_time_observer_a7fd1a71ce6f39d52e89472e9ace83ab8}\label{class_time_observer_a7fd1a71ce6f39d52e89472e9ace83ab8} 
+{\bfseries Time\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Time Observer\+:\+: Time Observer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time_observer_ac4c9966039d689414c9e2c049c924863}{Time\+Observer}} (\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*}new\+Mediator)
+\begin{DoxyCompactList}\small\item\em Construct a new Time Observer\+:\+: Time Observer object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_time_observer_ad6139ee0fddec2781c2618786eefb576}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the Time object. \end{DoxyCompactList}\item 
 \Hypertarget{class_time_observer_a7ebf55705059189cf2b0b1e5a40b4174}\label{class_time_observer_a7ebf55705059189cf2b0b1e5a40b4174} 
 void {\bfseries advance\+Time} ()
-\item 
-\Hypertarget{class_time_observer_af7d00d4458a6294e6cf3824b32e21b46}\label{class_time_observer_af7d00d4458a6294e6cf3824b32e21b46} 
-string {\bfseries send\+Message} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Advance the time of the day. \end{DoxyCompactList}\item 
+\Hypertarget{class_time_observer_a53b58868dcbc2a129ca3f17acb3c19da}\label{class_time_observer_a53b58868dcbc2a129ca3f17acb3c19da} 
+void {\bfseries send\+Message} ()
+\begin{DoxyCompactList}\small\item\em Send message to the integrator class to change the state of the devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_time_observer_a3e47a6bb0299edc061a7280faacc9d8a}\label{class_time_observer_a3e47a6bb0299edc061a7280faacc9d8a} 
 int {\bfseries time}
+\item 
+\Hypertarget{class_time_observer_aaa7134ce5c253ee563bda481aa8122fd}\label{class_time_observer_aaa7134ce5c253ee563bda481aa8122fd} 
+\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*} {\bfseries mediator}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_time_observer_ac4c9966039d689414c9e2c049c924863}\index{TimeObserver@{TimeObserver}!TimeObserver@{TimeObserver}}
+\index{TimeObserver@{TimeObserver}!TimeObserver@{TimeObserver}}
+\doxysubsubsection{\texorpdfstring{TimeObserver()}{TimeObserver()}}
+{\footnotesize\ttfamily \label{class_time_observer_ac4c9966039d689414c9e2c049c924863} 
+Time\+Observer\+::\+Time\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mediator}{Mediator}} \texorpdfstring{$\ast$}{*}}]{new\+Mediator}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new Time Observer\+:\+: Time Observer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Mediator} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_observer_ad6139ee0fddec2781c2618786eefb576}\index{TimeObserver@{TimeObserver}!getTime@{getTime}}
+\index{getTime@{getTime}!TimeObserver@{TimeObserver}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{class_time_observer_ad6139ee0fddec2781c2618786eefb576} 
+int Time\+Observer\+::get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Time object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Time\+Observer.\+h\item 
-Time\+Observer.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_time_observer_8cpp}{Time\+Observer.\+cpp}}\end{DoxyCompactItemize}

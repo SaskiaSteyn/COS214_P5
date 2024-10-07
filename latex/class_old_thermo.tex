@@ -11,23 +11,31 @@ Inheritance diagram for Old\+Thermo\+:\begin{figure}[H]
 \item 
 \Hypertarget{class_old_thermo_a9a39a523a52502bf2e3aa204a083e731}\label{class_old_thermo_a9a39a523a52502bf2e3aa204a083e731} 
 {\bfseries Old\+Thermo} (float initial\+Temp)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Old Thermo\+:\+: Old Thermo object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_old_thermo_a67d616306348aff5372f9f1655218cca}{increase\+Temp}} (float new\+Temp)
-\item 
+\begin{DoxyCompactList}\small\item\em Increase the temperature. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_old_thermo_a941d523fae052aa41515c46f167f06b6}{decrease\+Temp}} (float new\+Temp)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Decrease the temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}}
 \begin{DoxyCompactItemize}
 \item 
 {\bfseries Thermo\+Type} (float initial\+Temp)
+\begin{DoxyCompactList}\small\item\em Construct a new Thermo Type\+:\+: Thermo Type object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_thermo_type_a42b7ddec9cb73ec9cd782eb45360e44c}{get\+Temp}} ()
+\begin{DoxyCompactList}\small\item\em returns the temperature \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_thermo_type_a5026652f0a5dc56651441b82417c5275}{get\+Door}} ()
 \item 
-float {\bfseries get\+Temp} ()
+bool \mbox{\hyperlink{class_thermo_type_ae5cb159e39011f9c8604088c1aa611e7}{get\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_thermo_type_aee2fc6163f41c877c9cdb8d111bde4bf}{set\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_thermo_type_a8dd644c4baa6e1f5566468bbbcb64fb0}{toggle\+Door}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries receive\+Message} (string message)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}}
 \begin{DoxyCompactItemize}
@@ -45,7 +53,16 @@ void Old\+Thermo\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+
 
 
 
-Reimplemented from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}.
+Decrease the temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Temp} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_thermo_type_ae794e25c23522eb8ab1e41fbb4dcaf96}{Thermo\+Type}}.
 
 \Hypertarget{class_old_thermo_a67d616306348aff5372f9f1655218cca}\index{OldThermo@{OldThermo}!increaseTemp@{increaseTemp}}
 \index{increaseTemp@{increaseTemp}!OldThermo@{OldThermo}}
@@ -55,11 +72,20 @@ void Old\+Thermo\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+
 
 
 
-Reimplemented from \mbox{\hyperlink{class_thermo_type}{Thermo\+Type}}.
+Increase the temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Temp} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_thermo_type_a10363d88b4ee7227eb3a7b045055105b}{Thermo\+Type}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Old\+Thermo.\+h\item 
-Old\+Thermo.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_old_thermo_8cpp}{Old\+Thermo.\+cpp}}\end{DoxyCompactItemize}

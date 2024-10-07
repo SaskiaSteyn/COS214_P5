@@ -9,19 +9,34 @@ Inheritance diagram for Thermo\+Integrator\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9}\label{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9} 
-void {\bfseries add\+Thermo} (\mbox{\hyperlink{class_thermo_type}{Thermo\+Type}} \texorpdfstring{$\ast$}{*}new\+Thermo)
+\Hypertarget{class_thermo_integrator_aaa1e465a14170a7fdc535ab6aecf2d00}\label{class_thermo_integrator_aaa1e465a14170a7fdc535ab6aecf2d00} 
+{\bfseries Thermo\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Thermo \doxylink{class_integrator}{Integrator}\+:\+: Thermo \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_thermo_integrator_a2e7a88d6d011d24f5f6765e08276fea7}\label{class_thermo_integrator_a2e7a88d6d011d24f5f6765e08276fea7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Thermo\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Thermo \doxylink{class_integrator}{Integrator}\+:\+: Thermo \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9}{add\+Thermo}} (\mbox{\hyperlink{class_thermo_type}{Thermo\+Type}} \texorpdfstring{$\ast$}{*}new\+Thermo)
+\begin{DoxyCompactList}\small\item\em Add a new thermostat object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_thermo_integrator_a109812e155d6af3d5af778c162d79523}{set\+Thermo}} (float old\+Temp, float new\+Temp)
+\begin{DoxyCompactList}\small\item\em sets the temperature \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_thermo_integrator_aedf697e29341438e4e68c5bc40ed6fc0}{get\+Temp}} ()
+\begin{DoxyCompactList}\small\item\em returns the temperature \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_thermo_integrator_ae4ea37ef7324dde5efef12bd033c633e}{get\+Door}} ()
 \item 
-\Hypertarget{class_thermo_integrator_a109812e155d6af3d5af778c162d79523}\label{class_thermo_integrator_a109812e155d6af3d5af778c162d79523} 
-void {\bfseries set\+Thermo} (float old\+Temp, float new\+Temp)
+virtual bool \mbox{\hyperlink{class_thermo_integrator_a33a631f3204062209f168ed61bf1c0b4}{get\+Light}} ()
 \item 
-\Hypertarget{class_thermo_integrator_a71d561b4375e0e7f23c03aada0f920cb}\label{class_thermo_integrator_a71d561b4375e0e7f23c03aada0f920cb} 
-float {\bfseries get\+Thermo} ()
+virtual void \mbox{\hyperlink{class_thermo_integrator_a08b8a5473eb35158a40bb2816787ab15}{increase\+Temp}} (float new\+Temp)
+\item 
+virtual void \mbox{\hyperlink{class_thermo_integrator_a4a476bb30b3ed81ee743a3a0eaf98308}{decrease\+Temp}} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries receive\+Message} (string message)
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_integrator_a949633ea983db5528f75e1eb140d6e6a}{set\+Light}} ()
+\item 
+virtual void \mbox{\hyperlink{class_integrator_a34fdb5b8432c2ca6c2f242829a7f2bd0}{toggle\+Door}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -31,7 +46,99 @@ void {\bfseries receive\+Message} (string message)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9}\index{ThermoIntegrator@{ThermoIntegrator}!addThermo@{addThermo}}
+\index{addThermo@{addThermo}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{addThermo()}{addThermo()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9} 
+void Thermo\+Integrator\+::add\+Thermo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_thermo_type}{Thermo\+Type}} \texorpdfstring{$\ast$}{*}}]{new\+Thermo}{}\end{DoxyParamCaption})}
+
+
+
+Add a new thermostat object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Thermo} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_thermo_integrator_a4a476bb30b3ed81ee743a3a0eaf98308}\index{ThermoIntegrator@{ThermoIntegrator}!decreaseTemp@{decreaseTemp}}
+\index{decreaseTemp@{decreaseTemp}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{decreaseTemp()}{decreaseTemp()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_a4a476bb30b3ed81ee743a3a0eaf98308} 
+virtual void Thermo\+Integrator\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_thermo_integrator_ae4ea37ef7324dde5efef12bd033c633e}\index{ThermoIntegrator@{ThermoIntegrator}!getDoor@{getDoor}}
+\index{getDoor@{getDoor}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{getDoor()}{getDoor()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_ae4ea37ef7324dde5efef12bd033c633e} 
+virtual bool Thermo\+Integrator\+::get\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_thermo_integrator_a33a631f3204062209f168ed61bf1c0b4}\index{ThermoIntegrator@{ThermoIntegrator}!getLight@{getLight}}
+\index{getLight@{getLight}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{getLight()}{getLight()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_a33a631f3204062209f168ed61bf1c0b4} 
+virtual bool Thermo\+Integrator\+::get\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_thermo_integrator_aedf697e29341438e4e68c5bc40ed6fc0}\index{ThermoIntegrator@{ThermoIntegrator}!getTemp@{getTemp}}
+\index{getTemp@{getTemp}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{getTemp()}{getTemp()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_aedf697e29341438e4e68c5bc40ed6fc0} 
+float Thermo\+Integrator\+::get\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the temperature 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_thermo_integrator_a08b8a5473eb35158a40bb2816787ab15}\index{ThermoIntegrator@{ThermoIntegrator}!increaseTemp@{increaseTemp}}
+\index{increaseTemp@{increaseTemp}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{increaseTemp()}{increaseTemp()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_a08b8a5473eb35158a40bb2816787ab15} 
+virtual void Thermo\+Integrator\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_thermo_integrator_a109812e155d6af3d5af778c162d79523}\index{ThermoIntegrator@{ThermoIntegrator}!setThermo@{setThermo}}
+\index{setThermo@{setThermo}!ThermoIntegrator@{ThermoIntegrator}}
+\doxysubsubsection{\texorpdfstring{setThermo()}{setThermo()}}
+{\footnotesize\ttfamily \label{class_thermo_integrator_a109812e155d6af3d5af778c162d79523} 
+void Thermo\+Integrator\+::set\+Thermo (\begin{DoxyParamCaption}\item[{float}]{old\+Temp}{, }\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})}
+
+
+
+sets the temperature 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Temp} & \\
+\hline
+{\em new\+Temp} & \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Thermo\+Integrator.\+h\item 
-Thermo\+Integrator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_thermo_integrator_8cpp}{Thermo\+Integrator.\+cpp}}\end{DoxyCompactItemize}

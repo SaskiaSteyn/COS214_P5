@@ -9,20 +9,33 @@ Inheritance diagram for Light\+Integrator\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_light_integrator_a7b5be8a3cc180bfc57c2609a3906200e}\label{class_light_integrator_a7b5be8a3cc180bfc57c2609a3906200e} 
-void {\bfseries add\+Light} (\mbox{\hyperlink{class_light_type}{Light\+Type}} \texorpdfstring{$\ast$}{*}new\+Light)
+\Hypertarget{class_light_integrator_a6029293ed1a60e0acecbc239d5fc0c7c}\label{class_light_integrator_a6029293ed1a60e0acecbc239d5fc0c7c} 
+{\bfseries Light\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Light \doxylink{class_integrator}{Integrator}\+:\+: Light \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_light_integrator_a62cb696a6689c22d55012b539fb40fd9}\label{class_light_integrator_a62cb696a6689c22d55012b539fb40fd9} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Light\+Integrator} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Light \doxylink{class_integrator}{Integrator}\+:\+: Light \doxylink{class_integrator}{Integrator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_integrator_a7b5be8a3cc180bfc57c2609a3906200e}{add\+Light}} (\mbox{\hyperlink{class_light_type}{Light\+Type}} \texorpdfstring{$\ast$}{*}new\+Light)
+\begin{DoxyCompactList}\small\item\em Add a new light object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b}{set\+Light}} ()
+\begin{DoxyCompactList}\small\item\em sets the light state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_light_integrator_ae257f4405bb5c07143f53008c82fd725}{get\+Light}} ()
+\begin{DoxyCompactList}\small\item\em returns the light state \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_light_integrator_ab7a6bf8a5c8b298de87d2d0a704a395a}{get\+Door}} ()
 \item 
-\Hypertarget{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b}\label{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b} 
-void {\bfseries set\+Light} ()
+virtual float \mbox{\hyperlink{class_light_integrator_af991de8fdbc5318b4f6e3b37af782b7d}{get\+Temp}} ()
 \item 
-\Hypertarget{class_light_integrator_ae257f4405bb5c07143f53008c82fd725}\label{class_light_integrator_ae257f4405bb5c07143f53008c82fd725} 
-bool {\bfseries get\+Light} ()
+virtual void \mbox{\hyperlink{class_light_integrator_a94239d4b1cda1f30d2b79da2eca7c212}{toggle\+Door}} ()
+\item 
+virtual void \mbox{\hyperlink{class_light_integrator_a7165a34797abe1597641d9a4f92ffc56}{increase\+Temp}} (float new\+Temp)
+\item 
+virtual void \mbox{\hyperlink{class_light_integrator_abb6cf03c8eef28a9b240d988e44b3b12}{decrease\+Temp}} (float new\+Temp)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_integrator}{Integrator}}}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries receive\+Message} (string message)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_integrator_ac9723d2be9cff0d1c0bb19fef1ed829b}{receive\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Receive a message from the macro event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,7 +44,108 @@ void {\bfseries receive\+Message} (string message)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_light_integrator_a7b5be8a3cc180bfc57c2609a3906200e}\index{LightIntegrator@{LightIntegrator}!addLight@{addLight}}
+\index{addLight@{addLight}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{addLight()}{addLight()}}
+{\footnotesize\ttfamily \label{class_light_integrator_a7b5be8a3cc180bfc57c2609a3906200e} 
+void Light\+Integrator\+::add\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_light_type}{Light\+Type}} \texorpdfstring{$\ast$}{*}}]{new\+Light}{}\end{DoxyParamCaption})}
+
+
+
+Add a new light object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Light} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_light_integrator_abb6cf03c8eef28a9b240d988e44b3b12}\index{LightIntegrator@{LightIntegrator}!decreaseTemp@{decreaseTemp}}
+\index{decreaseTemp@{decreaseTemp}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{decreaseTemp()}{decreaseTemp()}}
+{\footnotesize\ttfamily \label{class_light_integrator_abb6cf03c8eef28a9b240d988e44b3b12} 
+virtual void Light\+Integrator\+::decrease\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_ab7a6bf8a5c8b298de87d2d0a704a395a}\index{LightIntegrator@{LightIntegrator}!getDoor@{getDoor}}
+\index{getDoor@{getDoor}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{getDoor()}{getDoor()}}
+{\footnotesize\ttfamily \label{class_light_integrator_ab7a6bf8a5c8b298de87d2d0a704a395a} 
+virtual bool Light\+Integrator\+::get\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_ae257f4405bb5c07143f53008c82fd725}\index{LightIntegrator@{LightIntegrator}!getLight@{getLight}}
+\index{getLight@{getLight}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{getLight()}{getLight()}}
+{\footnotesize\ttfamily \label{class_light_integrator_ae257f4405bb5c07143f53008c82fd725} 
+bool Light\+Integrator\+::get\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the light state 
+
+\begin{DoxyReturn}{Returns}
+true if the light is on 
+
+false if the light is off 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_af991de8fdbc5318b4f6e3b37af782b7d}\index{LightIntegrator@{LightIntegrator}!getTemp@{getTemp}}
+\index{getTemp@{getTemp}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{getTemp()}{getTemp()}}
+{\footnotesize\ttfamily \label{class_light_integrator_af991de8fdbc5318b4f6e3b37af782b7d} 
+virtual float Light\+Integrator\+::get\+Temp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_a7165a34797abe1597641d9a4f92ffc56}\index{LightIntegrator@{LightIntegrator}!increaseTemp@{increaseTemp}}
+\index{increaseTemp@{increaseTemp}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{increaseTemp()}{increaseTemp()}}
+{\footnotesize\ttfamily \label{class_light_integrator_a7165a34797abe1597641d9a4f92ffc56} 
+virtual void Light\+Integrator\+::increase\+Temp (\begin{DoxyParamCaption}\item[{float}]{new\+Temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b}\index{LightIntegrator@{LightIntegrator}!setLight@{setLight}}
+\index{setLight@{setLight}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{setLight()}{setLight()}}
+{\footnotesize\ttfamily \label{class_light_integrator_a780e4488c3b0625aae47a9db1d20d03b} 
+void Light\+Integrator\+::set\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets the light state 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+\Hypertarget{class_light_integrator_a94239d4b1cda1f30d2b79da2eca7c212}\index{LightIntegrator@{LightIntegrator}!toggleDoor@{toggleDoor}}
+\index{toggleDoor@{toggleDoor}!LightIntegrator@{LightIntegrator}}
+\doxysubsubsection{\texorpdfstring{toggleDoor()}{toggleDoor()}}
+{\footnotesize\ttfamily \label{class_light_integrator_a94239d4b1cda1f30d2b79da2eca7c212} 
+virtual void Light\+Integrator\+::toggle\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_integrator}{Integrator}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Light\+Integrator.\+h\item 
-Light\+Integrator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_light_integrator_8cpp}{Light\+Integrator.\+cpp}}\end{DoxyCompactItemize}

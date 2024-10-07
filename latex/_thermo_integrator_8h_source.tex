@@ -13,15 +13,19 @@
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_type}{ThermoType}}\ *thermostat;}
 \DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator}{ThermoIntegrator}}();}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator}{\string~ThermoIntegrator}}();}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addThermo(\mbox{\hyperlink{class_thermo_type}{ThermoType}}*\ newThermo);}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setThermo(\textcolor{keywordtype}{float}\ oldTemp,\ \textcolor{keywordtype}{float}\ newTemp);}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getThermo();}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_THERMOINTEGRATOR\_H}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator_aaa1e465a14170a7fdc535ab6aecf2d00}{ThermoIntegrator}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_thermo_integrator_a2e7a88d6d011d24f5f6765e08276fea7}{\string~ThermoIntegrator}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thermo_integrator_ac00d2f3de83ef54f8de0d907b85addd9}{addThermo}}(\mbox{\hyperlink{class_thermo_type}{ThermoType}}*\ newThermo);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thermo_integrator_a109812e155d6af3d5af778c162d79523}{setThermo}}(\textcolor{keywordtype}{float}\ oldTemp,\ \textcolor{keywordtype}{float}\ newTemp);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_thermo_integrator_aedf697e29341438e4e68c5bc40ed6fc0}{getTemp}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ getDoor()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ getLight()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ increaseTemp(\textcolor{keywordtype}{float}\ newTemp)\ \{thermostat-\/>\mbox{\hyperlink{class_thermo_type_a10363d88b4ee7227eb3a7b045055105b}{increaseTemp}}(newTemp);\};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ decreaseTemp(\textcolor{keywordtype}{float}\ newTemp)\ \{thermostat-\/>\mbox{\hyperlink{class_thermo_type_ae794e25c23522eb8ab1e41fbb4dcaf96}{decreaseTemp}}(newTemp);\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CODE\_THERMOINTEGRATOR\_H}}
 
 \end{DoxyCode}

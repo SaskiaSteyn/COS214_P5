@@ -86,7 +86,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_mediator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Mediator Class Reference</div></div>
@@ -95,39 +95,61 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acc4e2b28d0b1a1e0bc0f262c8163a842" id="r_acc4e2b28d0b1a1e0bc0f262c8163a842"><td class="memItemLeft" align="right" valign="top"><a id="acc4e2b28d0b1a1e0bc0f262c8163a842" name="acc4e2b28d0b1a1e0bc0f262c8163a842"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyLights</b> ()</td></tr>
-<tr class="separator:acc4e2b28d0b1a1e0bc0f262c8163a842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5b6464afbfb048f99195af888ec2eb" id="r_ada5b6464afbfb048f99195af888ec2eb"><td class="memItemLeft" align="right" valign="top"><a id="ada5b6464afbfb048f99195af888ec2eb" name="ada5b6464afbfb048f99195af888ec2eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyThermo</b> ()</td></tr>
-<tr class="separator:ada5b6464afbfb048f99195af888ec2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c00e5b334c340ddfc57e3bbc2b06b7b" id="r_a6c00e5b334c340ddfc57e3bbc2b06b7b"><td class="memItemLeft" align="right" valign="top"><a id="a6c00e5b334c340ddfc57e3bbc2b06b7b" name="a6c00e5b334c340ddfc57e3bbc2b06b7b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyDoor</b> ()</td></tr>
-<tr class="separator:a6c00e5b334c340ddfc57e3bbc2b06b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1339e921606de1c6e3d8bffb2637f5cf" id="r_a1339e921606de1c6e3d8bffb2637f5cf"><td class="memItemLeft" align="right" valign="top"><a id="a1339e921606de1c6e3d8bffb2637f5cf" name="a1339e921606de1c6e3d8bffb2637f5cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handleReceivedMessage</b> (string message)</td></tr>
+<tr class="memitem:aa75ae071194f2da701d98de0f6ac0ba7" id="r_aa75ae071194f2da701d98de0f6ac0ba7"><td class="memItemLeft" align="right" valign="top"><a id="aa75ae071194f2da701d98de0f6ac0ba7" name="aa75ae071194f2da701d98de0f6ac0ba7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Mediator</b> ()</td></tr>
+<tr class="memdesc:aa75ae071194f2da701d98de0f6ac0ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_mediator.html">Mediator</a>:: <a class="el" href="class_mediator.html">Mediator</a> object. <br /></td></tr>
+<tr class="separator:aa75ae071194f2da701d98de0f6ac0ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1535a0503af070364cf4d8980dd7c148" id="r_a1535a0503af070364cf4d8980dd7c148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1535a0503af070364cf4d8980dd7c148">notifyLights</a> (bool state)</td></tr>
+<tr class="memdesc:a1535a0503af070364cf4d8980dd7c148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the lights to change state.  <br /></td></tr>
+<tr class="separator:a1535a0503af070364cf4d8980dd7c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f415c4a549d82d644e16407c5a2c8e" id="r_ae2f415c4a549d82d644e16407c5a2c8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2f415c4a549d82d644e16407c5a2c8e">notifyThermo</a> (float temp)</td></tr>
+<tr class="memdesc:ae2f415c4a549d82d644e16407c5a2c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the thermo to change state.  <br /></td></tr>
+<tr class="separator:ae2f415c4a549d82d644e16407c5a2c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac249034d189cd36e4cf793103651578f" id="r_ac249034d189cd36e4cf793103651578f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac249034d189cd36e4cf793103651578f">notifyDoor</a> (bool state)</td></tr>
+<tr class="memdesc:ac249034d189cd36e4cf793103651578f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the doors to change state.  <br /></td></tr>
+<tr class="separator:ac249034d189cd36e4cf793103651578f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1339e921606de1c6e3d8bffb2637f5cf" id="r_a1339e921606de1c6e3d8bffb2637f5cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1339e921606de1c6e3d8bffb2637f5cf">handleReceivedMessage</a> (string message)</td></tr>
+<tr class="memdesc:a1339e921606de1c6e3d8bffb2637f5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the received message.  <br /></td></tr>
 <tr class="separator:a1339e921606de1c6e3d8bffb2637f5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698b2fbc4b76ea8c12c95b8757af5929" id="r_a698b2fbc4b76ea8c12c95b8757af5929"><td class="memItemLeft" align="right" valign="top"><a id="a698b2fbc4b76ea8c12c95b8757af5929" name="a698b2fbc4b76ea8c12c95b8757af5929"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addLightNode</b> (<a class="el" href="class_light_node.html">LightNode</a> *light)</td></tr>
-<tr class="separator:a698b2fbc4b76ea8c12c95b8757af5929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc4ea859454d43373628144d70db1b6" id="r_a5fc4ea859454d43373628144d70db1b6"><td class="memItemLeft" align="right" valign="top"><a id="a5fc4ea859454d43373628144d70db1b6" name="a5fc4ea859454d43373628144d70db1b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addThermoNode</b> (<a class="el" href="class_thermo_node.html">ThermoNode</a> *thermo)</td></tr>
-<tr class="separator:a5fc4ea859454d43373628144d70db1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346507dc0a02b1ae7b63aae5aed6a5c8" id="r_a346507dc0a02b1ae7b63aae5aed6a5c8"><td class="memItemLeft" align="right" valign="top"><a id="a346507dc0a02b1ae7b63aae5aed6a5c8" name="a346507dc0a02b1ae7b63aae5aed6a5c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addDoorNode</b> (<a class="el" href="class_door_node.html">DoorNode</a> *door)</td></tr>
-<tr class="separator:a346507dc0a02b1ae7b63aae5aed6a5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77142d4b4a5096bf422089e1c3058e44" id="r_a77142d4b4a5096bf422089e1c3058e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77142d4b4a5096bf422089e1c3058e44">addLivingAreaLightNode</a> (<a class="el" href="class_light_node.html">LightNode</a> *light)</td></tr>
+<tr class="memdesc:a77142d4b4a5096bf422089e1c3058e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new living area light node.  <br /></td></tr>
+<tr class="separator:a77142d4b4a5096bf422089e1c3058e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d980ae651ca487ef403c8be5e894bf" id="r_a69d980ae651ca487ef403c8be5e894bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69d980ae651ca487ef403c8be5e894bf">addBedroomsLightNode</a> (<a class="el" href="class_light_node.html">LightNode</a> *light)</td></tr>
+<tr class="memdesc:a69d980ae651ca487ef403c8be5e894bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new bedrooms light node.  <br /></td></tr>
+<tr class="separator:a69d980ae651ca487ef403c8be5e894bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4804eb263453f005ff86858e9437e28" id="r_ac4804eb263453f005ff86858e9437e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4804eb263453f005ff86858e9437e28">addLivingAreaThermoNode</a> (<a class="el" href="class_thermo_node.html">ThermoNode</a> *thermo)</td></tr>
+<tr class="memdesc:ac4804eb263453f005ff86858e9437e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new living area thermo node.  <br /></td></tr>
+<tr class="separator:ac4804eb263453f005ff86858e9437e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ce62b931856d99f2e0f96d69e7924f" id="r_af4ce62b931856d99f2e0f96d69e7924f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ce62b931856d99f2e0f96d69e7924f">addBedroomsThermoNode</a> (<a class="el" href="class_thermo_node.html">ThermoNode</a> *thermo)</td></tr>
+<tr class="memdesc:af4ce62b931856d99f2e0f96d69e7924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new bedrooms thermo node.  <br /></td></tr>
+<tr class="separator:af4ce62b931856d99f2e0f96d69e7924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83086d4a3e66e7bcbd847874954e5c15" id="r_a83086d4a3e66e7bcbd847874954e5c15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83086d4a3e66e7bcbd847874954e5c15">addLivingAreaDoorNode</a> (<a class="el" href="class_door_node.html">DoorNode</a> *door)</td></tr>
+<tr class="memdesc:a83086d4a3e66e7bcbd847874954e5c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new living area door node.  <br /></td></tr>
+<tr class="separator:a83086d4a3e66e7bcbd847874954e5c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015d1a49f2f88fdc9c730a7bba163593" id="r_a015d1a49f2f88fdc9c730a7bba163593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a015d1a49f2f88fdc9c730a7bba163593">addBedroomsDoorNode</a> (<a class="el" href="class_door_node.html">DoorNode</a> *door)</td></tr>
+<tr class="memdesc:a015d1a49f2f88fdc9c730a7bba163593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new bedrooms door node.  <br /></td></tr>
+<tr class="separator:a015d1a49f2f88fdc9c730a7bba163593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a2c725fe743d3f74c74a9b40fc4376361" id="r_a2c725fe743d3f74c74a9b40fc4376361"><td class="memItemLeft" align="right" valign="top"><a id="a2c725fe743d3f74c74a9b40fc4376361" name="a2c725fe743d3f74c74a9b40fc4376361"></a>
-<a class="el" href="class_light_node.html">LightNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lightHead</b></td></tr>
-<tr class="separator:a2c725fe743d3f74c74a9b40fc4376361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98a6a6befd56ab9d9f910f8bddacc36e" id="r_a98a6a6befd56ab9d9f910f8bddacc36e"><td class="memItemLeft" align="right" valign="top"><a id="a98a6a6befd56ab9d9f910f8bddacc36e" name="a98a6a6befd56ab9d9f910f8bddacc36e"></a>
-<a class="el" href="class_thermo_node.html">ThermoNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>thermoHead</b></td></tr>
-<tr class="separator:a98a6a6befd56ab9d9f910f8bddacc36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af317e999a38b7fb2e43cef125ba1f101" id="r_af317e999a38b7fb2e43cef125ba1f101"><td class="memItemLeft" align="right" valign="top"><a id="af317e999a38b7fb2e43cef125ba1f101" name="af317e999a38b7fb2e43cef125ba1f101"></a>
-<a class="el" href="class_door_node.html">DoorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>doorHead</b></td></tr>
-<tr class="separator:af317e999a38b7fb2e43cef125ba1f101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aeb59d9bf50066f5162b9623432492234" id="r_aeb59d9bf50066f5162b9623432492234"><td class="memItemLeft" align="right" valign="top"><a id="aeb59d9bf50066f5162b9623432492234" name="aeb59d9bf50066f5162b9623432492234"></a>
+<a class="el" href="class_light_iterator.html">LightIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lightIteratorLivingArea</b></td></tr>
+<tr class="separator:aeb59d9bf50066f5162b9623432492234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04046ebb3ca0bfe28e8142ca780c3d49" id="r_a04046ebb3ca0bfe28e8142ca780c3d49"><td class="memItemLeft" align="right" valign="top"><a id="a04046ebb3ca0bfe28e8142ca780c3d49" name="a04046ebb3ca0bfe28e8142ca780c3d49"></a>
+<a class="el" href="class_light_iterator.html">LightIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lightIteratorBedrooms</b></td></tr>
+<tr class="separator:a04046ebb3ca0bfe28e8142ca780c3d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c08660f2e85abbfdcd8ff66cd675e0" id="r_a60c08660f2e85abbfdcd8ff66cd675e0"><td class="memItemLeft" align="right" valign="top"><a id="a60c08660f2e85abbfdcd8ff66cd675e0" name="a60c08660f2e85abbfdcd8ff66cd675e0"></a>
+<a class="el" href="class_thermo_iterator.html">ThermoIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>thermoIteratorBedrooms</b></td></tr>
+<tr class="separator:a60c08660f2e85abbfdcd8ff66cd675e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af438a4532e5a89863dd00d7790f239a0" id="r_af438a4532e5a89863dd00d7790f239a0"><td class="memItemLeft" align="right" valign="top"><a id="af438a4532e5a89863dd00d7790f239a0" name="af438a4532e5a89863dd00d7790f239a0"></a>
+<a class="el" href="class_thermo_iterator.html">ThermoIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>thermoIteratorLivingArea</b></td></tr>
+<tr class="separator:af438a4532e5a89863dd00d7790f239a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa85f78a1d1c112088cbf0b36c012a6" id="r_a2aa85f78a1d1c112088cbf0b36c012a6"><td class="memItemLeft" align="right" valign="top"><a id="a2aa85f78a1d1c112088cbf0b36c012a6" name="a2aa85f78a1d1c112088cbf0b36c012a6"></a>
+<a class="el" href="class_door_iterator.html">DoorIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>doorIteratorLivingArea</b></td></tr>
+<tr class="separator:a2aa85f78a1d1c112088cbf0b36c012a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf876e7fad326d8216d53c75940a53a5" id="r_abf876e7fad326d8216d53c75940a53a5"><td class="memItemLeft" align="right" valign="top"><a id="abf876e7fad326d8216d53c75940a53a5" name="abf876e7fad326d8216d53c75940a53a5"></a>
+<a class="el" href="class_door_iterator.html">DoorIterator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>doorIteratorBedrooms</b></td></tr>
+<tr class="separator:abf876e7fad326d8216d53c75940a53a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -140,10 +162,270 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DoorNode</b></td></t
 <tr class="memitem:a3f8d1d86d1bb82b067c81523d406f129" id="r_a3f8d1d86d1bb82b067c81523d406f129"><td class="memItemLeft" align="right" valign="top"><a id="a3f8d1d86d1bb82b067c81523d406f129" name="a3f8d1d86d1bb82b067c81523d406f129"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>ThermoNode</b></td></tr>
 <tr class="separator:a3f8d1d86d1bb82b067c81523d406f129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2c4f79f47af25c653c7c3ea9343331" id="r_afa2c4f79f47af25c653c7c3ea9343331"><td class="memItemLeft" align="right" valign="top"><a id="afa2c4f79f47af25c653c7c3ea9343331" name="afa2c4f79f47af25c653c7c3ea9343331"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>LightIterator</b></td></tr>
+<tr class="separator:afa2c4f79f47af25c653c7c3ea9343331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad565acb0d7a46f9b99ae989783f8bc1d" id="r_ad565acb0d7a46f9b99ae989783f8bc1d"><td class="memItemLeft" align="right" valign="top"><a id="ad565acb0d7a46f9b99ae989783f8bc1d" name="ad565acb0d7a46f9b99ae989783f8bc1d"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ThermoIterator</b></td></tr>
+<tr class="separator:ad565acb0d7a46f9b99ae989783f8bc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe1bd35d3a6edf615eaaebfa24eda8a" id="r_afbe1bd35d3a6edf615eaaebfa24eda8a"><td class="memItemLeft" align="right" valign="top"><a id="afbe1bd35d3a6edf615eaaebfa24eda8a" name="afbe1bd35d3a6edf615eaaebfa24eda8a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>DoorIterator</b></td></tr>
+<tr class="separator:afbe1bd35d3a6edf615eaaebfa24eda8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a015d1a49f2f88fdc9c730a7bba163593" name="a015d1a49f2f88fdc9c730a7bba163593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015d1a49f2f88fdc9c730a7bba163593">&#9670;&#160;</a></span>addBedroomsDoorNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addBedroomsDoorNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_door_node.html">DoorNode</a> *</td>          <td class="paramname"><span class="paramname"><em>door</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new bedrooms door node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">door</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a69d980ae651ca487ef403c8be5e894bf" name="a69d980ae651ca487ef403c8be5e894bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d980ae651ca487ef403c8be5e894bf">&#9670;&#160;</a></span>addBedroomsLightNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addBedroomsLightNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_light_node.html">LightNode</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new bedrooms light node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af4ce62b931856d99f2e0f96d69e7924f" name="af4ce62b931856d99f2e0f96d69e7924f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ce62b931856d99f2e0f96d69e7924f">&#9670;&#160;</a></span>addBedroomsThermoNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addBedroomsThermoNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_thermo_node.html">ThermoNode</a> *</td>          <td class="paramname"><span class="paramname"><em>thermo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new bedrooms thermo node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thermo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a83086d4a3e66e7bcbd847874954e5c15" name="a83086d4a3e66e7bcbd847874954e5c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83086d4a3e66e7bcbd847874954e5c15">&#9670;&#160;</a></span>addLivingAreaDoorNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addLivingAreaDoorNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_door_node.html">DoorNode</a> *</td>          <td class="paramname"><span class="paramname"><em>door</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new living area door node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">door</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77142d4b4a5096bf422089e1c3058e44" name="a77142d4b4a5096bf422089e1c3058e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77142d4b4a5096bf422089e1c3058e44">&#9670;&#160;</a></span>addLivingAreaLightNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addLivingAreaLightNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_light_node.html">LightNode</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new living area light node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac4804eb263453f005ff86858e9437e28" name="ac4804eb263453f005ff86858e9437e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4804eb263453f005ff86858e9437e28">&#9670;&#160;</a></span>addLivingAreaThermoNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::addLivingAreaThermoNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_thermo_node.html">ThermoNode</a> *</td>          <td class="paramname"><span class="paramname"><em>thermo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new living area thermo node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thermo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1339e921606de1c6e3d8bffb2637f5cf" name="a1339e921606de1c6e3d8bffb2637f5cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1339e921606de1c6e3d8bffb2637f5cf">&#9670;&#160;</a></span>handleReceivedMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::handleReceivedMessage </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle the received message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac249034d189cd36e4cf793103651578f" name="ac249034d189cd36e4cf793103651578f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac249034d189cd36e4cf793103651578f">&#9670;&#160;</a></span>notifyDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::notifyDoor </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the doors to change state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1535a0503af070364cf4d8980dd7c148" name="a1535a0503af070364cf4d8980dd7c148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1535a0503af070364cf4d8980dd7c148">&#9670;&#160;</a></span>notifyLights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::notifyLights </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the lights to change state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2f415c4a549d82d644e16407c5a2c8e" name="ae2f415c4a549d82d644e16407c5a2c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f415c4a549d82d644e16407c5a2c8e">&#9670;&#160;</a></span>notifyThermo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mediator::notifyThermo </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>temp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the thermo to change state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temp</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_mediator_8h_source.html">Mediator.h</a></li>
-<li><b>Mediator.cpp</b></li>
+<li><a class="el" href="_mediator_8cpp.html">Mediator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

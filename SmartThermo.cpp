@@ -1,9 +1,28 @@
+/**
+ * @file SmartThermo.cpp
+ * @author Saskia
+ * @brief Concrete Product of the template class (ThermoType)
+ * @version 0.1
+ * @date 2024-10-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "SmartThermo.h"
 
+/**
+ * @brief Construct a new Smart Thermo:: Smart Thermo object
+ * 
+ */
 SmartThermo::SmartThermo(float initialTemp) : ThermoType(initialTemp) {
 
 }
 
+/**
+ * @brief Increase the temperature
+ * 
+ * @param newTemp 
+ */
 void SmartThermo::increaseTemp(float newTemp) {
     if (newTemp > temp) {
         temp = newTemp;
@@ -13,6 +32,11 @@ void SmartThermo::increaseTemp(float newTemp) {
     }
 }
 
+/**
+ * @brief Decrease the temperature
+ * 
+ * @param newTemp 
+ */
 void SmartThermo::decreaseTemp(float newTemp) {
     if (newTemp < temp) {
         temp = newTemp;

@@ -3,38 +3,49 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_mediator_acc4e2b28d0b1a1e0bc0f262c8163a842}\label{class_mediator_acc4e2b28d0b1a1e0bc0f262c8163a842} 
-void {\bfseries notify\+Lights} ()
-\item 
-\Hypertarget{class_mediator_ada5b6464afbfb048f99195af888ec2eb}\label{class_mediator_ada5b6464afbfb048f99195af888ec2eb} 
-void {\bfseries notify\+Thermo} ()
-\item 
-\Hypertarget{class_mediator_a6c00e5b334c340ddfc57e3bbc2b06b7b}\label{class_mediator_a6c00e5b334c340ddfc57e3bbc2b06b7b} 
-void {\bfseries notify\+Door} ()
-\item 
-\Hypertarget{class_mediator_a1339e921606de1c6e3d8bffb2637f5cf}\label{class_mediator_a1339e921606de1c6e3d8bffb2637f5cf} 
-void {\bfseries handle\+Received\+Message} (string message)
-\item 
-\Hypertarget{class_mediator_a698b2fbc4b76ea8c12c95b8757af5929}\label{class_mediator_a698b2fbc4b76ea8c12c95b8757af5929} 
-void {\bfseries add\+Light\+Node} (\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*}light)
-\item 
-\Hypertarget{class_mediator_a5fc4ea859454d43373628144d70db1b6}\label{class_mediator_a5fc4ea859454d43373628144d70db1b6} 
-void {\bfseries add\+Thermo\+Node} (\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*}thermo)
-\item 
-\Hypertarget{class_mediator_a346507dc0a02b1ae7b63aae5aed6a5c8}\label{class_mediator_a346507dc0a02b1ae7b63aae5aed6a5c8} 
-void {\bfseries add\+Door\+Node} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}door)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
+\Hypertarget{class_mediator_aa75ae071194f2da701d98de0f6ac0ba7}\label{class_mediator_aa75ae071194f2da701d98de0f6ac0ba7} 
+{\bfseries Mediator} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_mediator}{Mediator}\+:\+: \doxylink{class_mediator}{Mediator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a1535a0503af070364cf4d8980dd7c148}{notify\+Lights}} (bool state)
+\begin{DoxyCompactList}\small\item\em Notify the lights to change state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_ae2f415c4a549d82d644e16407c5a2c8e}{notify\+Thermo}} (float temp)
+\begin{DoxyCompactList}\small\item\em Notify the thermo to change state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_ac249034d189cd36e4cf793103651578f}{notify\+Door}} (bool state)
+\begin{DoxyCompactList}\small\item\em Notify the doors to change state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a1339e921606de1c6e3d8bffb2637f5cf}{handle\+Received\+Message}} (string message)
+\begin{DoxyCompactList}\small\item\em Handle the received message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a77142d4b4a5096bf422089e1c3058e44}{add\+Living\+Area\+Light\+Node}} (\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*}light)
+\begin{DoxyCompactList}\small\item\em Add a new living area light node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a69d980ae651ca487ef403c8be5e894bf}{add\+Bedrooms\+Light\+Node}} (\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*}light)
+\begin{DoxyCompactList}\small\item\em Add a new bedrooms light node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_ac4804eb263453f005ff86858e9437e28}{add\+Living\+Area\+Thermo\+Node}} (\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*}thermo)
+\begin{DoxyCompactList}\small\item\em Add a new living area thermo node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_af4ce62b931856d99f2e0f96d69e7924f}{add\+Bedrooms\+Thermo\+Node}} (\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*}thermo)
+\begin{DoxyCompactList}\small\item\em Add a new bedrooms thermo node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a83086d4a3e66e7bcbd847874954e5c15}{add\+Living\+Area\+Door\+Node}} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}door)
+\begin{DoxyCompactList}\small\item\em Add a new living area door node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mediator_a015d1a49f2f88fdc9c730a7bba163593}{add\+Bedrooms\+Door\+Node}} (\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}door)
+\begin{DoxyCompactList}\small\item\em Add a new bedrooms door node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_mediator_a2c725fe743d3f74c74a9b40fc4376361}\label{class_mediator_a2c725fe743d3f74c74a9b40fc4376361} 
-\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*} {\bfseries light\+Head}
+\Hypertarget{class_mediator_aeb59d9bf50066f5162b9623432492234}\label{class_mediator_aeb59d9bf50066f5162b9623432492234} 
+\mbox{\hyperlink{class_light_iterator}{Light\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries light\+Iterator\+Living\+Area}
 \item 
-\Hypertarget{class_mediator_a98a6a6befd56ab9d9f910f8bddacc36e}\label{class_mediator_a98a6a6befd56ab9d9f910f8bddacc36e} 
-\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*} {\bfseries thermo\+Head}
+\Hypertarget{class_mediator_a04046ebb3ca0bfe28e8142ca780c3d49}\label{class_mediator_a04046ebb3ca0bfe28e8142ca780c3d49} 
+\mbox{\hyperlink{class_light_iterator}{Light\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries light\+Iterator\+Bedrooms}
 \item 
-\Hypertarget{class_mediator_af317e999a38b7fb2e43cef125ba1f101}\label{class_mediator_af317e999a38b7fb2e43cef125ba1f101} 
-\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*} {\bfseries door\+Head}
+\Hypertarget{class_mediator_a60c08660f2e85abbfdcd8ff66cd675e0}\label{class_mediator_a60c08660f2e85abbfdcd8ff66cd675e0} 
+\mbox{\hyperlink{class_thermo_iterator}{Thermo\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries thermo\+Iterator\+Bedrooms}
+\item 
+\Hypertarget{class_mediator_af438a4532e5a89863dd00d7790f239a0}\label{class_mediator_af438a4532e5a89863dd00d7790f239a0} 
+\mbox{\hyperlink{class_thermo_iterator}{Thermo\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries thermo\+Iterator\+Living\+Area}
+\item 
+\Hypertarget{class_mediator_a2aa85f78a1d1c112088cbf0b36c012a6}\label{class_mediator_a2aa85f78a1d1c112088cbf0b36c012a6} 
+\mbox{\hyperlink{class_door_iterator}{Door\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries door\+Iterator\+Living\+Area}
+\item 
+\Hypertarget{class_mediator_abf876e7fad326d8216d53c75940a53a5}\label{class_mediator_abf876e7fad326d8216d53c75940a53a5} 
+\mbox{\hyperlink{class_door_iterator}{Door\+Iterator}} \texorpdfstring{$\ast$}{*} {\bfseries door\+Iterator\+Bedrooms}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -47,10 +58,172 @@ class {\bfseries Door\+Node}
 \item 
 \Hypertarget{class_mediator_a3f8d1d86d1bb82b067c81523d406f129}\label{class_mediator_a3f8d1d86d1bb82b067c81523d406f129} 
 class {\bfseries Thermo\+Node}
+\item 
+\Hypertarget{class_mediator_afa2c4f79f47af25c653c7c3ea9343331}\label{class_mediator_afa2c4f79f47af25c653c7c3ea9343331} 
+class {\bfseries Light\+Iterator}
+\item 
+\Hypertarget{class_mediator_ad565acb0d7a46f9b99ae989783f8bc1d}\label{class_mediator_ad565acb0d7a46f9b99ae989783f8bc1d} 
+class {\bfseries Thermo\+Iterator}
+\item 
+\Hypertarget{class_mediator_afbe1bd35d3a6edf615eaaebfa24eda8a}\label{class_mediator_afbe1bd35d3a6edf615eaaebfa24eda8a} 
+class {\bfseries Door\+Iterator}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mediator_a015d1a49f2f88fdc9c730a7bba163593}\index{Mediator@{Mediator}!addBedroomsDoorNode@{addBedroomsDoorNode}}
+\index{addBedroomsDoorNode@{addBedroomsDoorNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addBedroomsDoorNode()}{addBedroomsDoorNode()}}
+{\footnotesize\ttfamily \label{class_mediator_a015d1a49f2f88fdc9c730a7bba163593} 
+void Mediator\+::add\+Bedrooms\+Door\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}}]{door}{}\end{DoxyParamCaption})}
+
+
+
+Add a new bedrooms door node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em door} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_a69d980ae651ca487ef403c8be5e894bf}\index{Mediator@{Mediator}!addBedroomsLightNode@{addBedroomsLightNode}}
+\index{addBedroomsLightNode@{addBedroomsLightNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addBedroomsLightNode()}{addBedroomsLightNode()}}
+{\footnotesize\ttfamily \label{class_mediator_a69d980ae651ca487ef403c8be5e894bf} 
+void Mediator\+::add\+Bedrooms\+Light\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*}}]{light}{}\end{DoxyParamCaption})}
+
+
+
+Add a new bedrooms light node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_af4ce62b931856d99f2e0f96d69e7924f}\index{Mediator@{Mediator}!addBedroomsThermoNode@{addBedroomsThermoNode}}
+\index{addBedroomsThermoNode@{addBedroomsThermoNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addBedroomsThermoNode()}{addBedroomsThermoNode()}}
+{\footnotesize\ttfamily \label{class_mediator_af4ce62b931856d99f2e0f96d69e7924f} 
+void Mediator\+::add\+Bedrooms\+Thermo\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*}}]{thermo}{}\end{DoxyParamCaption})}
+
+
+
+Add a new bedrooms thermo node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thermo} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_a83086d4a3e66e7bcbd847874954e5c15}\index{Mediator@{Mediator}!addLivingAreaDoorNode@{addLivingAreaDoorNode}}
+\index{addLivingAreaDoorNode@{addLivingAreaDoorNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addLivingAreaDoorNode()}{addLivingAreaDoorNode()}}
+{\footnotesize\ttfamily \label{class_mediator_a83086d4a3e66e7bcbd847874954e5c15} 
+void Mediator\+::add\+Living\+Area\+Door\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_door_node}{Door\+Node}} \texorpdfstring{$\ast$}{*}}]{door}{}\end{DoxyParamCaption})}
+
+
+
+Add a new living area door node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em door} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_a77142d4b4a5096bf422089e1c3058e44}\index{Mediator@{Mediator}!addLivingAreaLightNode@{addLivingAreaLightNode}}
+\index{addLivingAreaLightNode@{addLivingAreaLightNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addLivingAreaLightNode()}{addLivingAreaLightNode()}}
+{\footnotesize\ttfamily \label{class_mediator_a77142d4b4a5096bf422089e1c3058e44} 
+void Mediator\+::add\+Living\+Area\+Light\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_light_node}{Light\+Node}} \texorpdfstring{$\ast$}{*}}]{light}{}\end{DoxyParamCaption})}
+
+
+
+Add a new living area light node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_ac4804eb263453f005ff86858e9437e28}\index{Mediator@{Mediator}!addLivingAreaThermoNode@{addLivingAreaThermoNode}}
+\index{addLivingAreaThermoNode@{addLivingAreaThermoNode}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{addLivingAreaThermoNode()}{addLivingAreaThermoNode()}}
+{\footnotesize\ttfamily \label{class_mediator_ac4804eb263453f005ff86858e9437e28} 
+void Mediator\+::add\+Living\+Area\+Thermo\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_thermo_node}{Thermo\+Node}} \texorpdfstring{$\ast$}{*}}]{thermo}{}\end{DoxyParamCaption})}
+
+
+
+Add a new living area thermo node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thermo} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_a1339e921606de1c6e3d8bffb2637f5cf}\index{Mediator@{Mediator}!handleReceivedMessage@{handleReceivedMessage}}
+\index{handleReceivedMessage@{handleReceivedMessage}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{handleReceivedMessage()}{handleReceivedMessage()}}
+{\footnotesize\ttfamily \label{class_mediator_a1339e921606de1c6e3d8bffb2637f5cf} 
+void Mediator\+::handle\+Received\+Message (\begin{DoxyParamCaption}\item[{string}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Handle the received message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_ac249034d189cd36e4cf793103651578f}\index{Mediator@{Mediator}!notifyDoor@{notifyDoor}}
+\index{notifyDoor@{notifyDoor}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{notifyDoor()}{notifyDoor()}}
+{\footnotesize\ttfamily \label{class_mediator_ac249034d189cd36e4cf793103651578f} 
+void Mediator\+::notify\+Door (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Notify the doors to change state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_a1535a0503af070364cf4d8980dd7c148}\index{Mediator@{Mediator}!notifyLights@{notifyLights}}
+\index{notifyLights@{notifyLights}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{notifyLights()}{notifyLights()}}
+{\footnotesize\ttfamily \label{class_mediator_a1535a0503af070364cf4d8980dd7c148} 
+void Mediator\+::notify\+Lights (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Notify the lights to change state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mediator_ae2f415c4a549d82d644e16407c5a2c8e}\index{Mediator@{Mediator}!notifyThermo@{notifyThermo}}
+\index{notifyThermo@{notifyThermo}!Mediator@{Mediator}}
+\doxysubsubsection{\texorpdfstring{notifyThermo()}{notifyThermo()}}
+{\footnotesize\ttfamily \label{class_mediator_ae2f415c4a549d82d644e16407c5a2c8e} 
+void Mediator\+::notify\+Thermo (\begin{DoxyParamCaption}\item[{float}]{temp}{}\end{DoxyParamCaption})}
+
+
+
+Notify the thermo to change state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Mediator.\+h\item 
-Mediator.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_mediator_8cpp}{Mediator.\+cpp}}\end{DoxyCompactItemize}
