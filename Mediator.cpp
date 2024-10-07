@@ -77,3 +77,87 @@ void Mediator::addDoorNode(DoorNode* door){
         current->next = door;
     }
 }
+
+void Mediator::addOutdoorLightNode(LightNode* light) {
+    if (outdoorLightHead == nullptr) {
+        outdoorLightHead = light;
+    } else {
+        LightNode *current = outdoorLightHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = light;
+    }
+}
+
+void Mediator::addLivingAreaLightNode(LightNode* light) {
+    if (livingAreaLightHead == nullptr) {
+        livingAreaLightHead = light;
+    } else {
+        LightNode *current = livingAreaLightHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = light;
+    }
+}
+
+void Mediator::addBedroomsLightNode(LightNode* light) {
+    if (bedroomsLightHead == nullptr) {
+        bedroomsLightHead = light;
+    } else {
+        LightNode *current = bedroomsLightHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = light;
+    }
+}
+
+void Mediator::addLivingAreaThermoNode(ThermoNode* thermo) {
+    if (livingAreaThermoHead == nullptr) {
+        livingAreaThermoHead = thermo;
+    } else {
+        ThermoNode *current = livingAreaThermoHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = thermo;
+    }
+}
+
+void Mediator::addBedroomsThermoNode(ThermoNode* thermo) {
+    if (bedroomsThermoHead == nullptr) {
+        bedroomsThermoHead = thermo;
+    } else {
+        ThermoNode *current = bedroomsThermoHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = thermo;
+    }
+}
+
+void Mediator::addLivingAreaDoorNode(DoorNode* door) {
+    if (livingAreaDoorHead == nullptr) {
+        livingAreaDoorHead = door;
+    } else {
+        DoorNode *current = livingAreaDoorHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = door;
+    }
+}
+
+void Mediator::addBedroomsDoorNode(DoorNode* door) {
+    if (bedroomsDoorHead == nullptr) {
+        bedroomsDoorHead = door;
+    } else {
+        DoorNode *current = bedroomsDoorHead;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = door;
+    }
+}

@@ -22,6 +22,16 @@ class Mediator {
         ThermoNode* thermoHead;
         DoorNode* doorHead;
 
+        LightNode* outdoorLightHead;
+        LightNode* livingAreaLightHead;
+        LightNode* bedroomsLightHead;
+
+        ThermoNode* livingAreaThermoHead;
+        ThermoNode* bedroomsThermoHead;
+
+        DoorNode* livingAreaDoorHead;
+        DoorNode* bedroomsDoorHead;
+
     public:
         Mediator() : lightHead(nullptr), thermoHead(nullptr), doorHead(nullptr) {}
         void notifyLights();
@@ -32,6 +42,16 @@ class Mediator {
         void addLightNode(LightNode* light);
         void addThermoNode(ThermoNode* thermo);
         void addDoorNode(DoorNode* door);
+
+        void addOutdoorLightNode(LightNode* light);
+        void addLivingAreaLightNode(LightNode* light);
+        void addBedroomsLightNode(LightNode* light);
+
+        void addLivingAreaThermoNode(ThermoNode* thermo);
+        void addBedroomsThermoNode(ThermoNode* thermo);
+
+        void addLivingAreaDoorNode(DoorNode* door);
+        void addBedroomsDoorNode(DoorNode* door);
 
 };
 
