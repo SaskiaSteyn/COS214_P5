@@ -64,15 +64,15 @@ void printMap(Mediator smartHomeSystem, TimeObserver time) {
 
     // Door statuses
     bool masterDoor = smartHomeSystem.doorIteratorBedrooms->current->door->getDoor();
-    cout << "Master door is " << masterDoor << endl;
+    // cout << "Master door is " << masterDoor << endl;
     smartHomeSystem.doorIteratorBedrooms->goToNext();
     bool bedroomDoor = smartHomeSystem.doorIteratorBedrooms->current->door->getDoor();
-    cout << "Bedroom door is " << bedroomDoor << endl;
+    // cout << "Bedroom door is " << bedroomDoor << endl;
     bool bathroomDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
-    cout << "Bathroom door is " << bathroomDoor << endl;
+    // cout << "Bathroom door is " << bathroomDoor << endl;
     smartHomeSystem.doorIteratorLivingArea->goToNext();
     bool frontDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
-    cout << "Front door is " << frontDoor<< endl;
+    // cout << "Front door is " << frontDoor<< endl;
 
     cout << "\n\n\nUser's House:\n";
     cout << "Time of Day: ";
@@ -347,4 +347,3 @@ int main() {
         printMap(smartHomeSystem, *time);
     }
 }
-
