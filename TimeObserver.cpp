@@ -27,6 +27,7 @@ TimeObserver::TimeObserver() {
 TimeObserver::TimeObserver(Mediator* newMediator) {
     time = 0;
     this->mediator = newMediator;
+    sendMessage();
 }
 
 /**

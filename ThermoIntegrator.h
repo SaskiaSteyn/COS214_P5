@@ -15,6 +15,8 @@ public:
         void addThermo(ThermoType* newThermo);
         void setThermo(float oldTemp, float newTemp);
         float getTemp();
+        virtual void setDoor() {};
+        virtual void toggleDoor() {};
         virtual bool getDoor() {return false;};
         virtual bool getLight() {return false;}
         virtual void increaseTemp(float newTemp) {thermostat->increaseTemp(newTemp);};
