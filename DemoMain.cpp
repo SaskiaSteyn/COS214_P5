@@ -15,7 +15,6 @@
 
 #include "LightNode.h"
 #include "DoorNode.h"
-#include "OldDoor.h"
 #include "ThermoNode.h"
 
 #include "TimeObserver.h"
@@ -38,7 +37,7 @@ int chooseOption() {
     return option;
 }
 
-void printMap(Mediator smartHomeSystem) {
+void printMap(Mediator smartHomeSystem, TimeObserver time) {
     smartHomeSystem.thermoIteratorLivingArea->reset();
     smartHomeSystem.thermoIteratorBedrooms->reset();
     smartHomeSystem.lightIteratorLivingArea->reset();
@@ -71,7 +70,20 @@ void printMap(Mediator smartHomeSystem) {
     smartHomeSystem.doorIteratorLivingArea->goToNext();
     bool frontDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
 
-    // std::cout << "Advanced House Floor Plan:\n\n";
+    cout << "\n\n\nUser's House:\n";
+    cout << "Time of Day: ";
+    if (time.getTime() == 0) {
+        cout << "Morning\n\n";
+    }
+    else if (time.getTime() == 1) {
+        cout << "Afternoon\n\n";
+    }
+    else if (time.getTime() == 2) {
+        cout << "Evening\n\n";
+    }
+    else if (time.getTime() == 3) {
+        cout << "Night\n\n";
+    }
 
     // Bedroom Area with hallway, bedrooms, and bathroom
     cout << "  +---------------------------+        Thermostat          : " << bedroomTemp << "°C\n";
@@ -189,17 +201,17 @@ int main() {
     auto *time = new TimeObserver(&smartHomeSystem);
     auto *movement = new MovementObserver(&smartHomeSystem);
 
-    printMap(smartHomeSystem);
+    printMap(smartHomeSystem, *time);
 
-    string firstInput = "";
+    string firstInput;
 
     cout << endl << endl << "The user is currently outside" << endl;
 
-    while (firstInput != "y" || firstInput != "Y" || firstInput != "Yes" || firstInput != "yes" || firstInput != "n" || firstInput != "N" || firstInput != "No" || firstInput != "no") {
+    while (firstInput != "y" && firstInput != "Y" && firstInput != "Yes" && firstInput != "yes" && firstInput != "n" && firstInput != "N" && firstInput != "No" && firstInput != "no") {
         cout << "Go Inside? (y/n): ";
         cin >> firstInput;
 
-        if (firstInput != "y" || firstInput != "Y" || firstInput != "Yes" || firstInput != "yes" || firstInput != "n" || firstInput != "N" || firstInput != "No" || firstInput != "no") {
+        if (firstInput != "y" && firstInput != "Y" && firstInput != "Yes" && firstInput != "yes" && firstInput != "n" && firstInput != "N" && firstInput != "No" && firstInput != "no") {
             cout << "Please give a valid input" << endl;
         }
     }
@@ -327,11 +339,7 @@ int main() {
         //
         //     }
 
-        printMap(smartHomeSystem);
+        printMap(smartHomeSystem, *time);
     }
-
-
-
-    return 0;
 }
 
