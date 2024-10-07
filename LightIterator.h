@@ -13,10 +13,11 @@ class LightIterator{
         LightNode* head;
 
     public:
+        LightIterator();
         LightIterator(LightNode *node);
         LightNode* goToNext();
         void reset();
-
+        void addNode(LightNode *newNode);
 };
 
 

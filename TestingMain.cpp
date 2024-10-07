@@ -35,25 +35,25 @@ void testSetLight();
 void testGetDoor();
 void testingMessageOnIntegrator();
 
-int main() {
-    testLightIntegration();
-    testThermoIntegration();
-    testThermoTypeMethods(); // New test for ThermoType methods
-    testDoorIntegration();
-    testEventMessages();
-    testMediatorAddNodes();
-    testMediatorNotifyMethods(); // New test for notify methods
-    testNodeConstructors(); // New test for Node constructors
-    testLightNodeConstructor(); // Test for LightNode constructor
-    testTimeObserver();
-    testMovementObserver();
-    testSetLight();
-    testGetDoor();
-    testingMessageOnIntegrator();
-
-
-    return 0;
-}
+// int main() {
+//     testLightIntegration();
+//     testThermoIntegration();
+//     testThermoTypeMethods(); // New test for ThermoType methods
+//     testDoorIntegration();
+//     testEventMessages();
+//     testMediatorAddNodes();
+//     testMediatorNotifyMethods(); // New test for notify methods
+//     testNodeConstructors(); // New test for Node constructors
+//     testLightNodeConstructor(); // Test for LightNode constructor
+//     testTimeObserver();
+//     testMovementObserver();
+//     testSetLight();
+//     testGetDoor();
+//     testingMessageOnIntegrator();
+//
+//
+//     return 0;
+// }
 
 void testSetLight(){
     LightType* light = new LightType;

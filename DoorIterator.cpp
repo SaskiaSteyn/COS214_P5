@@ -1,5 +1,7 @@
 #include "DoorIterator.h"
 
+DoorIterator::DoorIterator() {}
+
 DoorIterator::DoorIterator(DoorNode *door) {
     this->current = door;
     this->head = door;
@@ -13,4 +15,16 @@ DoorNode *DoorIterator::goToNext() {
 
 void DoorIterator::reset() {
     this->current = this->head;
+}
+
+void DoorIterator::addNode(DoorNode* newNode) {
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        DoorNode *current = head;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
 }

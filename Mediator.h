@@ -5,6 +5,10 @@
 #include "ThermoNode.h"
 #include "DoorNode.h"
 
+#include "LightIterator.h"
+#include "ThermoIterator.h"
+#include "DoorIterator.h"
+
 class DoorNode;
 class ThermoNode;
 class LightNode;
@@ -18,32 +22,30 @@ class Mediator {
     friend class ThermoNode;
 
     protected:
-        LightNode* lightHead;
-        ThermoNode* thermoHead;
-        DoorNode* doorHead;
+        // LightNode* outdoorLightHead;
+        // LightNode* livingAreaLightHead;
+        // LightNode* bedroomsLightHead;
+        //
+        // ThermoNode* livingAreaThermoHead;
+        // ThermoNode* bedroomsThermoHead;
+        //
+        // DoorNode* livingAreaDoorHead;
+        // DoorNode* bedroomsDoorHead;
 
-        LightNode* outdoorLightHead;
-        LightNode* livingAreaLightHead;
-        LightNode* bedroomsLightHead;
-
-        ThermoNode* livingAreaThermoHead;
-        ThermoNode* bedroomsThermoHead;
-
-        DoorNode* livingAreaDoorHead;
-        DoorNode* bedroomsDoorHead;
+        LightIterator* lightIteratorLivingArea;
+        LightIterator* lightIteratorBedrooms;
+        ThermoIterator* thermoIteratorBedrooms;
+        ThermoIterator* thermoIteratorLivingArea;
+        DoorIterator* doorIteratorLivingArea;
+        DoorIterator* doorIteratorBedrooms;
 
     public:
-        Mediator() : lightHead(nullptr), thermoHead(nullptr), doorHead(nullptr) {}
+        Mediator();
         void notifyLights();
         void notifyThermo();
         void notifyDoor();
         void handleReceivedMessage(string message);
 
-        void addLightNode(LightNode* light);
-        void addThermoNode(ThermoNode* thermo);
-        void addDoorNode(DoorNode* door);
-
-        void addOutdoorLightNode(LightNode* light);
         void addLivingAreaLightNode(LightNode* light);
         void addBedroomsLightNode(LightNode* light);
 

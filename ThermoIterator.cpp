@@ -1,5 +1,7 @@
 #include "ThermoIterator.h"
 
+ThermoIterator::ThermoIterator() {}
+
 ThermoIterator::ThermoIterator(ThermoNode *thermo) {
     this->current = thermo;
     this->head = thermo;
@@ -13,4 +15,17 @@ ThermoNode *ThermoIterator::goToNext() {
 
 void ThermoIterator::reset() {
     this->current = this->head;
+}
+
+
+void ThermoIterator::addNode(ThermoNode* newNode) {
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        ThermoNode *current = head;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
 }
