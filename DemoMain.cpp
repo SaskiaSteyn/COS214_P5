@@ -71,7 +71,7 @@ void printMap(Mediator smartHomeSystem) {
     smartHomeSystem.doorIteratorLivingArea->goToNext();
     bool frontDoor = smartHomeSystem.doorIteratorLivingArea->current->door->getDoor();
 
-    std::cout << "Advanced House Floor Plan:\n\n";
+    // std::cout << "Advanced House Floor Plan:\n\n";
 
     // Bedroom Area with hallway, bedrooms, and bathroom
     cout << "  +---------------------------+        Thermostat          : " << bedroomTemp << "°C\n";
@@ -191,13 +191,21 @@ int main() {
 
     printMap(smartHomeSystem);
 
-    string firstInput;
+    string firstInput = "";
 
     cout << endl << endl << "The user is currently outside" << endl;
-    cout << "Go Inside? (y/n): ";
-    cin >> firstInput;
 
-    if (firstInput == "n" || firstInput == "N" || firstInput == "No") {
+    while (firstInput != "y" || firstInput != "Y" || firstInput != "Yes" || firstInput != "yes" || firstInput != "n" || firstInput != "N" || firstInput != "No" || firstInput != "no") {
+        cout << "Go Inside? (y/n): ";
+        cin >> firstInput;
+
+        if (firstInput != "y" || firstInput != "Y" || firstInput != "Yes" || firstInput != "yes" || firstInput != "n" || firstInput != "N" || firstInput != "No" || firstInput != "no") {
+            cout << "Please give a valid input" << endl;
+        }
+    }
+
+
+    if (firstInput == "n" || firstInput == "N" || firstInput == "No" || firstInput == "no") {
         cout << "Thank you for playing our demo. See you next time!" << endl;
     }
 

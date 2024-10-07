@@ -40,7 +40,7 @@ void Mediator::notifyLights(bool state) {
     }
     lightIteratorBedrooms->reset();
 
-    cout << "Notifying all light nodes..." << endl;
+    // cout << "Notifying all light nodes..." << endl;
 }
 
 void Mediator::notifyThermo(float temp) {
@@ -55,7 +55,7 @@ void Mediator::notifyThermo(float temp) {
         thermoIteratorBedrooms->head->thermo->decreaseTemp(abs(temp - 2));
     }
 
-    cout << "Notifying all thermo nodes..." << endl;
+    // cout << "Notifying all thermo nodes..." << endl;
 
 }
 
@@ -87,13 +87,13 @@ void Mediator::notifyDoor(bool state) {
     }
     doorIteratorLivingArea->reset();
 
-    cout << "Notifying all door nodes..." << endl;
+    // cout << "Notifying all door nodes..." << endl;
 }
 
 void Mediator::handleReceivedMessage(string message) {
 
-    cout << "Message has been recieved: " << message << endl;
-    cout << "Notifying all smart and legacy devices to change state" << endl;
+    // cout << "Message has been recieved: " << message << endl;
+    // cout << "Notifying all smart and legacy devices to change state" << endl;
 
     // Time Messages
     if (message == "Time changed to morning") {
